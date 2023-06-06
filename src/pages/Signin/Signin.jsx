@@ -65,9 +65,9 @@ const Signin = () => {
             <Text color='#6A7C88' bg='white' fontSize={14} w='50px' textAlign='center' position='absolute' top='-11px' left='45%'>or</Text>
           </Box>
 
-          <Stack direction='row' alignItems='center' justifyContent='space-between' mb='7'>
-            <Button bg='white' w='200px' border='1.5px solid #E9ECED'><Image src={Google} w='45%' /></Button>
-            <Button bg='white' w='200px' border='1.5px solid #E9ECED'><Image src={Facebook} w='50%' /></Button>
+          <Stack direction={{base: 'column', md: 'row'}} alignItems='center' justifyContent='space-between' mb='7'>
+            <Button bg='white' w={{ base: '100%', md: '200px' }} border='1.5px solid #E9ECED'><Image src={Google} w={{ base: '35%', md: '45%' }} /></Button>
+            <Button bg='white' w={{ base: '100%', md: '200px' }} border='1.5px solid #E9ECED'><Image src={Facebook} w={{base: '40%', md: '50%'}} /></Button>
           </Stack>
 
           <Divider mb='5' />
