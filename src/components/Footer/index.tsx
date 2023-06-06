@@ -13,11 +13,14 @@ import React from "react";
 import Buttons from "../buttons";
 import Logo from "../logo";
 import { LinkedinIcon, SlackIcon, TwitterIcon } from "../icons";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
   return (
     <>
-      <Box pt={{ base: "40rem", lg: "20rem" }} w='100%'>
+    {location.pathname !== '/signin' && location.pathname !== '/signup' &&
+      (<Box pt={{ base: "40rem", lg: "20rem" }} w='100%'>
         <Box
           as="footer"
           bgColor="#172B37"
@@ -302,7 +305,7 @@ const Footer = () => {
             </Box>
           </Box>
         </Box>
-      </Box>
+      </Box>)}
 
       <Text
         textAlign="center"

@@ -15,11 +15,12 @@ import logo from "../../assets/gdg-logo.svg";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Link, useLocation } from "react-router-dom";
 
-
 const Navbar = () => {
   const location = useLocation();
   return (
-    <Box py="3" position='sticky' top='0' zIndex='2' bg='white'>
+    <>
+    {location.pathname !== '/signin' && location.pathname !== '/signup' && 
+   ( <Box py="3" position='sticky' top='0' zIndex='2' bg='white'>
       <Box w="100%" mx="auto">
         <Flex alignItems="center" justifyContent="space-between">
           <Box>
@@ -53,7 +54,9 @@ const Navbar = () => {
           <Box>
             {location.pathname === "/" ? 
             (
-              <Button bg='#E05D2F' fontSize={15} color='white' w='125px' h='42px' fontWeight='medium'>Register</Button>
+              <Link to='/signin'>
+                <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Register </Button>
+              </Link>
             ) 
             :
             <Flex alignItems="center" gap={2}>
@@ -73,7 +76,8 @@ const Navbar = () => {
           </Box>
         </Flex>
       </Box>
-    </Box>
+    </Box>)}
+    </>
   );
 };
 
