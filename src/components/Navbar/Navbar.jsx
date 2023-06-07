@@ -19,7 +19,7 @@ const Navbar = () => {
   const location = useLocation();
   return (
     <>
-    {location.pathname !== '/signin' && location.pathname !== '/signup' && 
+    {location.pathname !== '/signin' && location.pathname !== '/signup' && location.pathname !== '/verification' && 
    ( <Box py="3" position='sticky' top='0' zIndex='2' bg='white'>
       <Box w="100%" mx="auto">
         <Flex alignItems="center" justifyContent="space-between">

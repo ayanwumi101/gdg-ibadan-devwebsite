@@ -1,9 +1,10 @@
-import { Box, Text, Heading, Stack, Image, FormControl, FormLabel, Input, Button, Checkbox, Link, InputGroup, InputRightElement, Divider } from '@chakra-ui/react'
+import { Box, Text, Heading, Stack, Image, FormControl, FormLabel, Input, Button, Checkbox, InputGroup, InputRightElement, Divider } from '@chakra-ui/react'
 import React, {useState} from 'react'
 import LoginImage from '../../assets/login-image.png'
 import Google from '../../assets/google-icon.png'
 import Facebook from '../../assets/facebook-icon.png'
 import {ViewIcon, ViewOffIcon} from '@chakra-ui/icons'
+import {Link} from 'react-router-dom'
 
 const Signin = () => {
   const [show, setShow] = React.useState(false)
@@ -19,8 +20,8 @@ const Signin = () => {
           <Box mb='7'>
             <Heading color='#1E3747' mb='5' fontSize={32}>Sign in</Heading>
             <Stack direction='row' spacing={2}>
-              <Text color='#6A7C88'>Already have an account?</Text>
-              <Link><Text color='#E05D2F'>Sign Up</Text></Link>
+              <Text color='#6A7C88'>Don't have an account?</Text>
+              <Link to='/signup'><Text color='#E05D2F'>Sign Up</Text></Link>
             </Stack>
           </Box>
 
@@ -66,8 +67,8 @@ const Signin = () => {
           </Box>
 
           <Stack direction={{base: 'column', md: 'row'}} alignItems='center' justifyContent='space-between' mb='7'>
-            <Button bg='white' w={{ base: '100%', md: '200px' }} border='1.5px solid #E9ECED'><Image src={Google} w={{ base: '35%', md: '45%' }} /></Button>
-            <Button bg='white' w={{ base: '100%', md: '200px' }} border='1.5px solid #E9ECED'><Image src={Facebook} w={{base: '40%', md: '50%'}} /></Button>
+            <Button bg='white' w={{ base: '100%', md: '200px' }} border='1.5px solid #E9ECED'><Image src={Google} w={{ base: '33%', md: '45%' }} /></Button>
+            <Button bg='white' w={{ base: '100%', md: '200px' }} border='1.5px solid #E9ECED'><Image src={Facebook} w={{base: '38%', md: '50%'}} /></Button>
           </Stack>
 
           <Divider mb='5' />
