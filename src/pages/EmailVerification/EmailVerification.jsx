@@ -7,7 +7,7 @@ import React from 'react'
 const EmailVerification = () => {
   return (
     <Box display='flex' alignItems='center' justifyContent='center' h='600px'>
-        <Box backgroundImage={Bg} maxW='700px' mx='auto' backgroundRepeat='no-repeat' backgroundPosition='center'>
+        <Box backgroundImage={Bg} w={{base: '350px', lg: '700px'}} mx='auto' backgroundRepeat='no-repeat' backgroundPosition='center'>
             <Image src={Logo} display='block' mx='auto' mb='4' />
             <Box maxW='450px' h='300px' bg='white' boxShadow='2xl' mx='auto' borderRadius={10} p='5'>
                 <Image src={Message} display='block' mx='auto' mt='5' mb='5' />
