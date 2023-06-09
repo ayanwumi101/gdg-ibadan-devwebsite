@@ -5,6 +5,7 @@ import Home from './pages/Homepage/Home'
 import About from './pages/About'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer'
+import Event from './pages/event/page'
 import Signin from './pages/Signin/Signin'
 import Signup from './pages/Signup/Signup'
 import EmailVerification from './pages/EmailVerification/EmailVerification'
@@ -20,6 +21,7 @@ function App() {
           <Route exact path='/signin' element={<Signin />} />
           <Route exact path='/signup' element={<Signup />} />
           <Route exact path='/verification' element={<EmailVerification />} />
+          <Route path='/events' element={<Event />} />
           {/* <Route path='/contact' element={<Layout />} />
           <Route path='/login' element={<Layout />} /> */}
         </Routes>

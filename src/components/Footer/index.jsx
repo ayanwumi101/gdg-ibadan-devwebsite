@@ -12,7 +12,7 @@ import {
 import React from "react";
 import Buttons from "../buttons";
 import Logo from "../logo";
-import { LinkedinIcon, SlackIcon, TwitterIcon } from "../icons";
+// import { LinkedinIcon, SlackIcon, TwitterIcon } from "../icons";
 import { useLocation } from "react-router-dom";
 
 const Footer = () => {
@@ -241,9 +241,9 @@ const Footer = () => {
                   columnGap="25px"
                   cursor="pointer"
                 >
-                  <Icon as={SlackIcon}></Icon>
+                  {/* <Icon as={SlackIcon}></Icon>
                   <Icon as={LinkedinIcon}></Icon>
-                  <Icon as={TwitterIcon}></Icon>
+                  <Icon as={TwitterIcon}></Icon> */}
                 </Flex>
               </Box>
 

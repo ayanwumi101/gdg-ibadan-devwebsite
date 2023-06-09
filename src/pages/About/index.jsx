@@ -3,6 +3,7 @@ import { Button, Heading, Box } from "@chakra-ui/react";
 import Hero from "./subsections/Hero";
 import Mission from "./subsections/Mission";
 import Value from "./subsections/Value";
+import Organizers from '../../components/organisers'
 
 const About = () => {
   return (
@@ -12,6 +13,7 @@ const About = () => {
       </Box>
       <Mission />
       <Value />
+      <Organizers />
     </Box>
   );
 };

@@ -6,7 +6,7 @@ import {
   Heading,
   ListItem,
   Text,
-  UnorderedList, Image
+  UnorderedList, Image, Button
 } from "@chakra-ui/react";
 import Header from "../../assets/gdg-header.jpg";
 import carousel1 from "../../assets/carousel-image2.png";
@@ -122,10 +122,10 @@ const Home = () => {
           <Text
             pt="20px"
             color="#6A7C88"
-            fontSize="22px"
+            fontSize="18px"
             fontWeight="400"
             lineHeight="32px"
-            pb="44px"
+            mb='5'
             width={{ base: "302px", lg: "367px" }}
             as="p"
           // fontFamily="Google Sans Display, sans-serif"
@@ -134,10 +134,7 @@ const Home = () => {
             among tech enthusiasts of all levels. Whether you're a beginner or
             an expert, our community welcomes you.
           </Text>
-          <Buttons
-            btnText="Know More"
-          // marginBottom={{ base: "84px" }}
-          />
+          <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Know More</Button>
         </Box>
         <Box 
         w={{ base: "100%", lg: "50%" }}

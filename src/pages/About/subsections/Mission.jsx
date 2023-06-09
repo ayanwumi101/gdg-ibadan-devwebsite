@@ -16,7 +16,7 @@ const Mission = () => {
                 </Box>
             </Box>
             <Box maxW='380px'>
-                <Heading fontSize={40} fontWeight='bold' mb='6' color='#1E3747'>Our Mission</Heading>
+                <Heading fontSize={{base: 35, lg: 40}} fontWeight='bold' mb='6' color='#1E3747'>Our Mission</Heading>
                 <Text fontSize={{base: 18, lg: 18}} fontWeight='normal' color='#6A7C88'>
                     Access a wealth of knowledge and resources in our extensive library of tech content.
                 </Text>

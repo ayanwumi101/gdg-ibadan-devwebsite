@@ -5,12 +5,15 @@ import Google from '../../assets/google-icon.png'
 import Facebook from '../../assets/facebook-icon.png'
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons'
 import { Link} from 'react-router-dom'
+import BackButton from '../../components/BackButton/BackButton'
 
 const Signup = () => {
   const [show, setShow] = React.useState(false)
   const handleClick = () => setShow(!show)
   return (
     <Box w='100%' my='10' px={{ base: 5 }}>
+      <Stack direction={{base: 'column', lg: 'row'}} alignItems={{base: 'center', lg: 'flex-start'}} justifyContent='center' mx='auto'>
+      <BackButton />
       <Stack direction={{ base: 'column', lg: 'row' }} justifyContent='space-between' alignItems='center'>
         <Box w='550px' display={{ base: 'none', md: 'block', lg: 'block' }}>
           <Image src={LoginImage} w='100%' alt='Login Image' />
@@ -98,6 +101,7 @@ const Signup = () => {
             <Text fontSize={13.5} color='#6A7C88'>Protected by recaptcha and subject to the <a style={{ color: '#E05D2F' }}>Fenkei Privacy Policy</a> and <a style={{ color: '#E05D2F' }}>Terms of Service</a></Text>
           </Box>
         </Box>
+      </Stack>
       </Stack>
     </Box>
   )

@@ -8,13 +8,12 @@ import {
   Heading,
   Icon,
   Stack,
-  Text,
+  Text, Image
 } from "@chakra-ui/react";
 import React from "react";
-import Image from "next/image";
 import Buttons from "../buttons";
 import Event from "../../assets/event.png";
-import { DownloadIcon, LoveIcon } from "../icons";
+// import { DownloadIcon, LoveIcon } from "../icons";
 
 const EventCard = () => {
   return (
@@ -53,8 +52,8 @@ const EventCard = () => {
             padding="4px 15px 4px 15px"
           />
           <Box display="flex" columnGap="15px">
-            <Icon as={DownloadIcon}></Icon>
-            <Icon as={LoveIcon}></Icon>
+            {/* <Icon as={DownloadIcon}></Icon>
+            <Icon as={LoveIcon}></Icon> */}
           </Box>
         </Flex>
         <Stack mt="26.83px" spacing="18px" pr="17px" textAlign="center">

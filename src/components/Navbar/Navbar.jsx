@@ -39,7 +39,9 @@ const Navbar = () => {
       <Box w="100%" mx="auto">
         <Flex alignItems="center" justifyContent="space-between">
           <Box>
+            <Link to='/'>
             <Image src={logo} />
+            </Link>
           </Box>
 
           <Box display={{base: 'none', md: 'none', lg: 'block'}}>
@@ -128,23 +130,23 @@ export const SideNav = ({setOpenModal}) => {
         </DrawerHeader>
 
         <DrawerBody>
-            <VStack spacing={7} onClick={() => setOpenModal(false)}>
+            <VStack spacing={7}>
               <Menu isLazy color="#1E3747">
                 <MenuButton fontWeight="medium" fontSize={15}>
                   GDG Ibadan <ChevronDownIcon />
                 </MenuButton>
                 <MenuList>
                   <Link to='/about'>
-                    <MenuItem as="a" href="#" fontSize={14}>
+                    <MenuItem as="a" href="#" fontSize={14} onClick={() => setOpenModal(false)}>
                       About GDG Ibadan
                     </MenuItem></Link>
-                  <MenuItem>Job Board</MenuItem>
+                  <MenuItem onClick={() => setOpenModal(false)}>Job Board</MenuItem>
                 </MenuList>
               </Menu>
-              <Text fontWeight="medium" fontSize={15}>Events</Text>
-              <Text fontWeight="medium" fontSize={15}>Blog</Text>
+              <Text fontWeight="medium" fontSize={15} onClick={() => setOpenModal(false)}>Events</Text>
+              <Text fontWeight="medium" fontSize={15} onClick={() => setOpenModal(false)}>Blog</Text>
               <Link to='/signin'>
-                <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Register </Button>
+                <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md' onClick={() => setOpenModal(false)}>Register </Button>
               </Link>
             </VStack>
         </DrawerBody>

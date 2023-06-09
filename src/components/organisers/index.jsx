@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Heading, Image } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Button } from "@chakra-ui/react";
 import React from "react";
 import Lead from "../../assets/lead-img.png";
 import CoOrganiser from "../../assets/co-organiser.png";
@@ -150,7 +150,7 @@ const Organisers = () => {
           paddingTop={{ base: "60px", lg: "55px" }}
           paddingBottom={{ base: "29px", lg: "76px" }}
         >
-          <Buttons btnText="Contact Us" />
+          <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Contact Us</Button>
         </Box>
       </Box>
     </>

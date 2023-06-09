@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Navbar from "../../components/navbar";
 import EventCard from "../../components/eventcard";
 import {
   Box,
@@ -13,29 +12,29 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  Text,
+  Text,Image
 } from "@chakra-ui/react";
-import EventImg from "../../assets/about (1).png";
-import Image from "next/image";
-import Group from "../../assets/Group 60.png";
+import EventImg from "../../assets/aboutImg.png";
+import Group from "../../assets/groups.png";
 import Buttons from "../../components/buttons";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { BeatLoader } from "react-spinners";
-import Footer from "../../components/footer";
+
 
 const Event = () => {
   return (
     <>
-      <Navbar />
       <Box
-        maxW="100%"
+        w="100%"
         height="auto"
-        mt={{ base: "5.1rem", lg: "4.5rem" }}
-        ml={{ base: "20px", lg: "50px" }}
-        mr={{ base: "20px", lg: "50px" }}
+        mt='8'
+        mx='auto'
+        // mt={{ base: "5.1rem", lg: "4.5rem" }}
+        // ml={{ base: "20px", lg: "50px" }}
+        // mr={{ base: "20px", lg: "50px" }}
         position="relative"
       >
-        <Box height={{ base: "732px", lg: "auto" }}>
+        <Box height={{ base: "732px", lg: '100%' }}>
           <Image
             src={EventImg}
             alt={""}
@@ -79,7 +78,7 @@ const Event = () => {
           lineHeight="24px"
           fontWeight="500"
         >
-          <Buttons btnText={"Find Events"} />
+          <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Find Event</Button>
           <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
               Upcoming Events
@@ -141,7 +140,6 @@ const Event = () => {
           Click me
         </Button>
       </Box>
-      <Footer />
     </>
   );
 };
