@@ -12,7 +12,7 @@ import {
   IconButton,
   Stack,
   CardBody,
-  Card, Image
+  Card, Image, Badge
 } from "@chakra-ui/react";
 import BlogImage from "../../assets/about (4).png";
 import MobileImage from "../../assets/about (5).png";
@@ -67,17 +67,25 @@ const Blog = () => {
         </Flex>
       </Box>
 
-      <Box
-        display='flex'
-        flexDirection='row-reverse'
+      <Stack
         alignItems={{base: 'center', lg: 'flex-start'}}
         justifyContent={{base: 'center', lg: 'space-between'}}
         w='90%'
         mx='auto'
-        flex-flexWrap='wrap'
         my='8'
+        direction={{base: 'column-reverse', lg: 'row'}}
       >
-        <Box>
+        <Box my={{base: '10', lg: 0}} w={{base: '100%', lg: '65%'}}>
+          <SinglePost />
+          <SinglePost />
+          <SinglePost />
+          <SinglePost />
+          <SinglePost />
+          <SinglePost />
+          <SinglePost />
+        </Box>
+
+        <Box mb='8' w={{base: '100%', lg: '28%'}}>
           <Box>
             <InputGroup>
               <InputLeftElement
@@ -251,14 +259,33 @@ const Blog = () => {
 
           </Box>
         </Box>
-
-        <Box>
-         
-        </Box>
-       
-      </Box>
+      </Stack>
     </>
   );
 };
 
 export default Blog;
+
+
+
+export const SinglePost = () => {
+  return (
+    <Box w='100%' mb='16'> 
+      <Stack direction={{base: 'column', lg: 'row'}} justifyContent='space-between' alignItems='center'>
+        <Box w={{ base: '100%', lg: '65%' }} mb='4'>
+          <Box bg='#FCEFEA' py='1.5' px='3.5' borderRadius='85px' w='100px'><Text color='#E05D2F' fontSize={14} fontWeight='medium'>QA Testing</Text></Box>
+          <Heading my='3.5' fontSize={22} color='#1E3747'>The Best Productivity Apps for 2021 - Updated List</Heading>
+          <Box w='100%' border='1px dashed #BAC3C8' my='3'></Box>
+          <Stack direction='row' alignItems='center' gap={2}>
+            <Text color='#6A7C88' fontSize={14}>May 02, 2022</Text>
+            <Box w='6.5px' h='6.5px' borderRadius='50%' bg='#E05D2F'></Box>
+            <Text color='#6A7C88' fontSize={14}>Nattasha</Text>
+          </Stack>
+        </Box>
+        <Box w={{base: '60%', lg: '30%'}}>
+          <Image src={Design2} h='155px' w='100%' borderRadius={10} />
+        </Box>
+      </Stack>
+    </Box>
+  )
+}
