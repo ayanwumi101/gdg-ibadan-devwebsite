@@ -79,7 +79,7 @@ const Home = () => {
             </Text>{" "}
             website, where tech enthusiasts gather to share ideas and knowledge.
           </Text>
-          <Button bg='#E05D2F' w='210px' h={{ base: '40px', lg: '47px' }} color='white' boxShadow='md'>Join Our Community</Button>
+          <Button bg='#E05D2F' w='210px' h={{ base: '45px', lg: '47px' }} color='white' boxShadow='md'>Join Our Community</Button>
         </Box>
       </Box>
 

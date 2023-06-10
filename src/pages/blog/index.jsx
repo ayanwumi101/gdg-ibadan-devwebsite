@@ -31,41 +31,23 @@ const Blog = () => {
       <Box
         maxW="100%"
         height="auto"
-        mt={{ base: "5.1rem", lg: "4.5rem" }}
-        ml={{ base: "20px", lg: "50px" }}
-        mr={{ base: "20px", lg: "50px" }}
-        position="relative"
+        mt='7'
       >
-        <Box display={{ base: "none", lg: "block" }}>
+        <Box>
           <Image
             src={BlogImage}
             alt={""}
-            style={{
-              objectFit: "cover",
-              height: "100%",
-            }}
-          />
-        </Box>
-
-        <Box
-          height={{ base: "732px", lg: "auto" }}
-          display={{ base: "block", lg: "none" }}
-        >
-          <Image
-            src={MobileImage}
-            alt={""}
-            style={{
-              height: "100%",
-              width: "100%",
-              maxWidth: "100%",
-            }}
+            objectFit='cover'
+            borderRadius='24px'
+            w='100%'
+            h={{base: '550px', lg: '100%'}}
           />
         </Box>
       </Box>
 
-      <Box pt="76px" pl="121px" display={{ base: "none", lg: "block" }}>
-        <Flex columnGap="243px">
-          <Heading>Latest News</Heading>
+      <Box w='90%' mx='auto' my='16'>
+        <Flex alignItems='center' justifyContent='space-between' flexWrap='wrap'>
+          <Heading mb='4'>Latest News</Heading>
           <Box
             display="flex"
             columnGap="20px"
@@ -73,30 +55,30 @@ const Blog = () => {
             color="#213C4E"
           >
             <ChevronLeftIcon />
-            <Text>Business</Text>
-            <Text>Design</Text>
-            <Text>Development</Text>
-            <Text>Tech</Text>
-            <Text>Development</Text>
-            <Text>Branding</Text>
+            <Box display='flex' alignItems='center' gap={4} w={{base: '250px', lg: 'auto'}} overflow='auto'>
+              <Text>Business</Text>
+              <Text>Design</Text>
+              <Text>Development</Text>
+              <Text>Tech</Text>
+              <Text>Development</Text>
+              <Text>Branding</Text></Box>
             <ChevronRightIcon />
           </Box>
         </Flex>
       </Box>
 
       <Box
-        display={{ base: "block", lg: "flex" }}
-        pl={{ base: "20px", lg: "120px" }}
-        pr={{ base: "28px", lg: "132px" }}
-        columnGap="75px"
-        flexDirection="row-reverse"
+        display='flex'
+        flexDirection='row-reverse'
+        alignItems={{base: 'center', lg: 'flex-start'}}
+        justifyContent={{base: 'center', lg: 'space-between'}}
+        w='90%'
+        mx='auto'
+        flex-flexWrap='wrap'
+        my='8'
       >
-        <Box pt={{ base: "42px", lg: "47px" }}>
-          <Box
-            pl={{ base: "", lg: "40px" }}
-            pt={{ base: "", lg: "40px" }}
-            pr={{ base: "", lg: "40px" }}
-          >
+        <Box>
+          <Box>
             <InputGroup>
               <InputLeftElement
                 pointerEvents="none"
@@ -105,9 +87,10 @@ const Blog = () => {
               <Input placeholder="Search..." borderRadius="24px" />
             </InputGroup>
 
-            <Heading pt={{ base: "32px", lg: "32px" }} pb="32px">
+            <Heading fontSize={22} fontWeight='medium' my='8'>
               Recent Posts
             </Heading>
+
             <Box
               display="flex"
               overflow="hidden"
@@ -115,23 +98,23 @@ const Blog = () => {
               border="none"
               pb="42px"
             >
-              <Image objectFit="cover" src={Design1} alt={""} />
+              <Image objectFit="cover" w='100px' h='100px' src={Design1} alt={""} />
 
               <Box alignSelf="center">
                 <Box>
                   <Text
-                    fontSize="16px"
+                    fontSize="15px"
                     lineHeight="24px"
                     fontWeight="400"
                     color="#6A7C88"
-                    pb="12px"
+                    mb='3'
                   >
                     Design . Jan 2, 2023
                   </Text>
 
                   <Heading
-                    fontSize="16px"
-                    lineHeight="20px"
+                    fontSize="15px"
+                    lineHeight="24px"
                     fontWeight="500"
                     width="154px"
                   >
@@ -148,23 +131,23 @@ const Blog = () => {
               border="none"
               pb="52px"
             >
-              <Image objectFit="cover" src={Design2} alt={""} />
+              <Image objectFit="cover" w='100px' h='100px' src={Design2} alt={""} />
 
               <Box alignSelf="center">
                 <Box>
                   <Text
-                    fontSize="16px"
+                    fontSize="15px"
                     lineHeight="24px"
                     fontWeight="400"
                     color="#6A7C88"
-                    pb="12px"
+                    mb='3'
                   >
                     Design . Jan 2, 2023
                   </Text>
 
                   <Heading
-                    fontSize="16px"
-                    lineHeight="20px"
+                    fontSize="15px"
+                    lineHeight="24px"
                     fontWeight="500"
                     width="154px"
                   >
@@ -182,6 +165,7 @@ const Blog = () => {
             >
               Tags
             </Heading>
+
             <Box>
               <Flex columnGap="15px" pb="20px">
                 <Button
@@ -264,53 +248,14 @@ const Blog = () => {
                 </Button>
               </Flex>
             </Box>
-          </Box>
-        </Box>
 
-        <Box pt="46px" display={{ base: "block", lg: "none" }}>
-          <Box display="block">
-            <Heading pb="20px">Latest News</Heading>
-            <Box
-              display="flex"
-              columnGap="20px"
-              alignItems="center"
-              color="#213C4E"
-            >
-              <ChevronLeftIcon />
-              <Text>Business</Text>
-              <Text>Design</Text>
-              <Text>Branding</Text>
-              <ChevronRightIcon />
-            </Box>
           </Box>
         </Box>
 
         <Box>
-          <Box pt={{ base: "48px", lg: "71px" }}>
-            {" "}
-            <Testing />
-          </Box>
-          <Box pt="64px">
-            {" "}
-            <Testing />
-          </Box>
-          <Box pt="64px">
-            {" "}
-            <Testing />
-          </Box>
-          <Box pt="64px">
-            {" "}
-            <Testing />
-          </Box>
-          <Box pt="64px">
-            {" "}
-            <Testing />
-          </Box>
-          <Box pt="64px">
-            {" "}
-            <Testing />
-          </Box>
+         
         </Box>
+       
       </Box>
     </>
   );

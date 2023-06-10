@@ -7,10 +7,10 @@ const Testing = () => {
   return (
     <>
       <Flex
-        columnGap="32px"
-        display={{ base: "block", lg: "flex" }}
+        // columnGap="32px"
+        // display={{ base: "block", lg: "flex" }}
         // pl={{ base: "20px", lg: "0px" }}
-        pr={{ base: "28px", lg: "0px" }}
+        // pr={{ base: "28px", lg: "0px" }}
       >
         <Box>
           <Button color="#E05D2F" backgroundColor="#FCEFEA">
