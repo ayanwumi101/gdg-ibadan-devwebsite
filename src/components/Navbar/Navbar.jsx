@@ -63,7 +63,7 @@ const Navbar = () => {
                   <MenuItem>Job Board</MenuItem>
                 </MenuList>
               </Menu>
-              <Text fontWeight="medium" fontSize={15}>Events</Text>
+              <Link to='/events'><Text fontWeight="medium" fontSize={15}>Events</Text></Link>
               <Text fontWeight="medium" fontSize={15}>Blog</Text>
             </Stack>
           </Box>

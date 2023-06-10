@@ -47,8 +47,7 @@ const Event = () => {
         <Image src={Group} alt={""} />
       </Box>
       <Text
-        pt={{ base: "58px", lg: "98px" }}
-        pb={{ base: "20px", lg: "90px" }}
+        my='10'
         textAlign="center"
         fontSize={{ base: "32px", lg: "45px" }}
         fontWeight="500"
@@ -57,20 +56,25 @@ const Event = () => {
         Upcoming Events
       </Text>
       <Box
-        display={{ base: "block", lg: "flex" }}
-        pl={{ base: "21px", lg: "118px" }}
-        pr={{ base: "19px", lg: "135px" }}
-        pb={{ base: "58px", lg: "90px" }}
-        columnGap={{ lg: "48px" }}
+        w='90%'
+        mx='auto'
+        display='flex'
+        justifyContent='space-between'
+        mb='12'
+        flexWrap='wrap'
       >
         <Flex
-          columnGap={{ base: "20px", lg: "25px" }}
           fontSize="16px"
-          lineHeight="24px"
+          alignItems='center'
           fontWeight="400"
+          w={{base: '100%', lg: '50%'}}
+          gap={6}
+          mb='5'
+          flexWrap={{base: 'wrap', lg: 'nowrap'}}
         >
-          <Input placeholder="Date" />
-          <Input placeholder="Keyword" />
+          <Input placeholder="Date" w={{base: '100%', lg: '200px'}} />
+          <Input placeholder="Keyword" w={{ base: '100%', lg: '200px' }} />
+          <Button bg='#E05D2F' w={{ base: '100%', lg: '200px' }} h='43px' color='white' boxShadow='md'>Find Event</Button>
         </Flex>
         <Flex
           columnGap={{ base: "45px", lg: "179px" }}
@@ -78,9 +82,9 @@ const Event = () => {
           lineHeight="24px"
           fontWeight="500"
         >
-          <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Find Event</Button>
+          
           <Menu>
-            <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+            <MenuButton as={Button} rightIcon={<ChevronDownIcon />} fontSize={15}>
               Upcoming Events
             </MenuButton>
             <MenuList>
@@ -96,11 +100,11 @@ const Event = () => {
       </Box>
 
       <Flex
-        pl={{ base: "19px", lg: "116px" }}
-        pr={{ base: "19.08px", lg: "133.8px" }}
-        columnGap={{ lg: "32px" }}
-        pb={{ base: "0px", lg: "32.9px" }}
-        display={{ base: "block", lg: "flex" }}
+        w='90%'
+        mx='auto'
+        justifyContent={{base: 'center', lg: 'space-between'}}
+        flexWrap='wrap'
+        alignItems='center'
       >
         <EventCard />
         <EventCard />
@@ -108,10 +112,11 @@ const Event = () => {
       </Flex>
 
       <Flex
-        pl={{ base: "19px", lg: "116px" }}
-        pr={{ base: "19.08px", lg: "133.8px" }}
-        columnGap={{ lg: "32px" }}
-        display={{ base: "block", lg: "flex" }}
+        w='90%'
+        mx='auto'
+        justifyContent={{ base: 'center', lg: 'space-between' }}
+        flexWrap='wrap'
+        alignItems='center'
       >
         <EventCard />
         <EventCard />

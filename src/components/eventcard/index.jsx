@@ -8,11 +8,13 @@ import {
   Heading,
   Icon,
   Stack,
-  Text, Image
+  Text, Image, Button
 } from "@chakra-ui/react";
 import React from "react";
 import Buttons from "../buttons";
 import Event from "../../assets/event.png";
+import loveIcon from "../../assets/loveIcon.svg";
+import downloadIcon from "../../assets/downloadIcon.svg";
 // import { DownloadIcon, LoveIcon } from "../icons";
 
 const EventCard = () => {
@@ -20,8 +22,10 @@ const EventCard = () => {
     <>
       <Card
         borderRadius="12px"
-        mb={{ base: "28.7px", lg: "0px" }}
-        boxShadow="md"
+        mb='8'
+        boxShadow="lg"
+        w='315px'
+        h='400px'
       >
         <Image
           src={Event}
@@ -32,49 +36,32 @@ const EventCard = () => {
             position: "relative",
           }}
         />
-        <Flex
-          position="absolute"
-          columnGap={{ base: "13rem", lg: "9rem" }}
-          alignItems="center"
-          pl="17px"
-          pt="23px"
-          pr="23px"
-        >
-          <Buttons
-            btnText={"Free"}
-            background="#fff"
-            color="#303030"
-            // width="56px"
-            // height="27px"
-            fontSize="13px"
-            lineHeight="19px"
-            fontWeight="500"
-            padding="4px 15px 4px 15px"
-          />
-          <Box display="flex" columnGap="15px">
-            {/* <Icon as={DownloadIcon}></Icon>
-            <Icon as={LoveIcon}></Icon> */}
-          </Box>
-        </Flex>
-        <Stack mt="26.83px" spacing="18px" pr="17px" textAlign="center">
+        
+        <Box position='absolute' top='20px' mx='3' w='93%'>
+          <Stack justifyContent='space-between' direction='row'>
+            <Text bg='white' w='56px' textAlign='center' h='27px' borderRadius={10} fontSize={14} pt='0.5' boxShadow='md' fontWeight='medium' color='#303030'>Free</Text>
+            <Box display='flex' alignItems='center' gap={2}>
+              <Image src={downloadIcon} />
+              <Image src={loveIcon} />
+            </Box>
+          </Stack>
+        </Box>
+        
+        <Stack mt='2' direction='column' spacing={4} p='3'>
           <Heading
             as="h2"
-            fontSize="16px"
+            fontSize="15px"
             lineHeight="20px"
             fontWeight="500"
             color="#E05D2F"
           >
             Celebrate International Women's Day 2023
           </Heading>
-          <Text fontSize="14px" lineHeight="20px" fontWeight="400">
+          <Text fontSize="14px" lineHeight="20px" fontWeight="400" color='#1E3747'>
             March 1-April 31 | Virtual and in-person
           </Text>
+          <Button bg='#E05D2F' w='100px' h={{ base: '35px', lg: '40px' }} fontWeight='medium' fontSize={14} color='white' boxShadow='md'>Register</Button>
         </Stack>
-        <CardFooter>
-          <ButtonGroup mt="41.26px">
-            <Buttons btnText={"Register"} />
-          </ButtonGroup>
-        </CardFooter>
       </Card>
     </>
   );

@@ -97,6 +97,7 @@ const Home = () => {
       >
         <Box
           w={{ base: "100%", lg: "45%" }}
+          mb='8'
         >
           <Heading
             color="#1E3747"
@@ -134,10 +135,11 @@ const Home = () => {
             among tech enthusiasts of all levels. Whether you're a beginner or
             an expert, our community welcomes you.
           </Text>
-          <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Know More</Button>
+          <Button bg='#E05D2F' w='150px' h={{base: '40px', lg: '45px'}} color='white' boxShadow='md'>Know More</Button>
         </Box>
         <Box 
         w={{ base: "100%", lg: "50%" }}
+        mb='10'
         >
           <Image src={About} w='100%' alt="" />
         </Box>
