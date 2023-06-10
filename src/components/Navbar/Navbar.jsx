@@ -64,7 +64,7 @@ const Navbar = () => {
                 </MenuList>
               </Menu>
               <Link to='/events'><Text fontWeight="medium" fontSize={15}>Events</Text></Link>
-              <Text fontWeight="medium" fontSize={15}>Blog</Text>
+              <Link to='/blog'><Text fontWeight="medium" fontSize={15}>Blog</Text></Link>
             </Stack>
           </Box>
 
@@ -144,7 +144,7 @@ export const SideNav = ({setOpenModal}) => {
                 </MenuList>
               </Menu>
               <Link to='/events'><Text fontWeight="medium" fontSize={15} onClick={() => setOpenModal(false)}>Events</Text></Link>
-              <Text fontWeight="medium" fontSize={15} onClick={() => setOpenModal(false)}>Blog</Text>
+              <Link to='/blog'><Text fontWeight="medium" fontSize={15} onClick={() => setOpenModal(false)}>Blog</Text></Link>
               <Link to='/signin'>
                 <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md' onClick={() => setOpenModal(false)}>Register </Button>
               </Link>
