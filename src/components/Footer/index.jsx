@@ -7,12 +7,15 @@ import {
   Link,
   ListItem,
   Text,
-  UnorderedList, Button
+  UnorderedList, Button, Image
 } from "@chakra-ui/react";
 import React from "react";
 import Buttons from "../buttons";
 import Logo from "../logo";
 // import { LinkedinIcon, SlackIcon, TwitterIcon } from "../icons";
+import Slack from '../../assets/slack.svg'
+import linkedin from '../../assets/linkedin-logo.svg'
+import twitter from '../../assets/twitter-bird.svg'
 import { useLocation } from "react-router-dom";
 
 const Footer = () => {
@@ -21,7 +24,7 @@ const Footer = () => {
     <>
       {location.pathname !== '/signin' && location.pathname !== '/signup' && location.pathname !== '/verification' &&   
         (<Box>
-        <Box pt={{ base: "40rem", lg: "20rem" }} w='100%'>
+        <Box pt={{ base: "40rem", lg: "20rem" }} w='90%' mx='auto'>
           <Box
             as="footer"
             bgColor="#172B37"
@@ -241,9 +244,15 @@ const Footer = () => {
                   columnGap="25px"
                   cursor="pointer"
                 >
-                  {/* <Icon as={SlackIcon}></Icon>
-                  <Icon as={LinkedinIcon}></Icon>
-                  <Icon as={TwitterIcon}></Icon> */}
+                  <a href="https://gdg.community.dev/gdg-ibadan/" target='_blank'>
+                    <Image src={Slack} />
+                  </a>
+                  <a href="https://twitter.com/gdgibadan?s=11&t=q2B3F1i2ySbJLEmnk5TtKQ" target="_blank">
+                    <Image src={linkedin} />
+                  </a>
+                  <a href="" target="_blank">
+                    <Image src={twitter} />
+                  </a>                  
                 </Flex>
               </Box>
 

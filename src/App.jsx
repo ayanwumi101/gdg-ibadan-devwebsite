@@ -11,10 +11,12 @@ import Signup from './pages/Signup/Signup'
 import EmailVerification from './pages/EmailVerification/EmailVerification'
 import Blog from './pages/blog'
 import ErrorPage from './pages/404'
+import Jobs from './pages/Jobs'
+
 
 function App() {
   return (
-    <Box w='90%' mx='auto'>
+    <Box w='100%' mx='auto'>
       <Router>
         <Navbar />
         <Routes>
@@ -25,9 +27,8 @@ function App() {
           <Route exact path='/verification' element={<EmailVerification />} />
           <Route exact path='/blog' element={<Blog />} />
           <Route path='/events' element={<Event />} />
+          <Route exact path='/jobs' element={<Jobs />} />
           <Route exact path='*' element={<ErrorPage />} />
-          {/* <Route path='/contact' element={<Layout />} />
-          <Route path='/login' element={<Layout />} /> */}
         </Routes>
         <Footer />
       </Router>

@@ -24,12 +24,14 @@ import {
 import Testing from "../../components/testing";
 import Design1 from "../../assets/Frame 1000004323.png";
 import Design2 from "../../assets/Frame 1000004323 (1).png";
+import Design3 from "../../assets/image.png";
 
 const Blog = () => {
   return (
     <>
       <Box
-        maxW="100%"
+        w="90%"
+        mx='auto'
         height="auto"
         mt='7'
       >
@@ -45,7 +47,7 @@ const Blog = () => {
         </Box>
       </Box>
 
-      <Box w='90%' mx='auto' my='16'>
+      <Box w='80%' mx='auto' my='16'>
         <Flex alignItems='center' justifyContent='space-between' flexWrap='wrap'>
           <Heading mb='4'>Latest News</Heading>
           <Box
@@ -70,7 +72,7 @@ const Blog = () => {
       <Stack
         alignItems={{base: 'center', lg: 'flex-start'}}
         justifyContent={{base: 'center', lg: 'space-between'}}
-        w='90%'
+        w='80%'
         mx='auto'
         my='8'
         direction={{base: 'column-reverse', lg: 'row'}}
@@ -271,7 +273,7 @@ export default Blog;
 export const SinglePost = () => {
   return (
     <Box w='100%' mb='16'> 
-      <Stack direction={{base: 'column', lg: 'row'}} justifyContent='space-between' alignItems='center'>
+      <Stack direction={{base: 'column', lg: 'row'}} justifyContent='space-between' alignItems={{base: 'flex-start', lg: 'center'}}>
         <Box w={{ base: '100%', lg: '65%' }} mb='4'>
           <Box bg='#FCEFEA' py='1.5' px='3.5' borderRadius='85px' w='100px'><Text color='#E05D2F' fontSize={14} fontWeight='medium'>QA Testing</Text></Box>
           <Heading my='3.5' fontSize={22} color='#1E3747'>The Best Productivity Apps for 2021 - Updated List</Heading>
@@ -282,8 +284,8 @@ export const SinglePost = () => {
             <Text color='#6A7C88' fontSize={14}>Nattasha</Text>
           </Stack>
         </Box>
-        <Box w={{base: '60%', lg: '30%'}}>
-          <Image src={Design2} h='155px' w='100%' borderRadius={10} />
+        <Box w={{base: '75%', lg: '30%'}}>
+          <Image src={Design3} h='155px' objectFit='cover' w='100%' borderRadius={10} />
         </Box>
       </Stack>
     </Box>

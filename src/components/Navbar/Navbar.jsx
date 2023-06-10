@@ -19,6 +19,8 @@ import {
 } from "@chakra-ui/react";
 import React, {useState} from "react";
 import logo from "../../assets/gdg-logo.svg";
+import aboutIcon from "../../assets/about-icon.svg";
+import jobIcon from "../../assets/job-icon.svg";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { Link, useLocation } from "react-router-dom";
 import {HamburgerIcon, CloseIcon} from '@chakra-ui/icons'
@@ -35,8 +37,8 @@ const Navbar = () => {
     <>
     {openModal && <SideNav setOpenModal={setOpenModal} />}
     {location.pathname !== '/signin' && location.pathname !== '/signup' && location.pathname !== '/verification' && 
-   ( <Box py="3" position='sticky' top='0' h='70px' zIndex='2' bg='white' w='100%'>
-      <Box w="100%" mx="auto">
+   ( <Box py="4" position='sticky' top='0' zIndex='2' bg='white' w='100%' borderBottom='1px solid lightgray'>
+      <Box w="90%" mx="auto">
         <Flex alignItems="center" justifyContent="space-between">
           <Box>
             <Link to='/'>
@@ -56,11 +58,25 @@ const Navbar = () => {
                   GDG Ibadan <ChevronDownIcon />
                 </MenuButton>
                 <MenuList>
+
                   <Link to='/about'>
                     <MenuItem as="a" href="#" fontSize={14}>
-                      About GDG Ibadan
-                    </MenuItem></Link>
-                  <MenuItem>Job Board</MenuItem>
+                      <Flex alignItems='center' gap={2}>
+                          <Image src={aboutIcon} />
+                          <Text>About GDG Ibadan</Text>
+                      </Flex>
+                    </MenuItem>
+                  </Link>
+
+                  <Link to='/jobs'>
+                  <MenuItem as='a' href='#' fontSize={14}>
+                      <Flex alignItems='center' gap={2}>
+                        <Image src={jobIcon} />
+                        <Text>Job Board</Text>
+                      </Flex>
+                  </MenuItem>
+                  </Link>
+
                 </MenuList>
               </Menu>
               <Link to='/events'><Text fontWeight="medium" fontSize={15}>Events</Text></Link>
@@ -136,11 +152,24 @@ export const SideNav = ({setOpenModal}) => {
                   GDG Ibadan <ChevronDownIcon />
                 </MenuButton>
                 <MenuList>
-                  <Link to='/about'>
-                    <MenuItem as="a" href="#" fontSize={14} onClick={() => setOpenModal(false)}>
-                      About GDG Ibadan
-                    </MenuItem></Link>
-                  <MenuItem onClick={() => setOpenModal(false)}>Job Board</MenuItem>
+                <Link to='/about'>
+                  <MenuItem as="a" href="#" fontSize={14}>
+                    <Flex alignItems='center' gap={2}>
+                      <Image src={aboutIcon} />
+                      <Text>About GDG Ibadan</Text>
+                    </Flex>
+                  </MenuItem>
+                </Link>
+
+                <Link to='/jobs'>
+                  <MenuItem as='a' href='#' fontSize={14}>
+                    <Flex alignItems='center' gap={2}>
+                      <Image src={jobIcon} />
+                      <Text>Job Board</Text>
+                    </Flex>
+                  </MenuItem>
+                </Link>
+
                 </MenuList>
               </Menu>
               <Link to='/events'><Text fontWeight="medium" fontSize={15} onClick={() => setOpenModal(false)}>Events</Text></Link>

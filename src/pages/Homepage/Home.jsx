@@ -25,15 +25,17 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <>
       <Box
-        maxW="100%"
+        maxW="90%"
         height="auto"
         mt='5'
         position="relative"
+        mx='auto'
       >
         <Box height={{ base: "732px", lg: "100vh" }}>
           <Swiper spaceBetween={30} centeredSlides={true}
@@ -79,14 +81,19 @@ const Home = () => {
             </Text>{" "}
             website, where tech enthusiasts gather to share ideas and knowledge.
           </Text>
-          <Button bg='#E05D2F' w='210px' h={{ base: '45px', lg: '47px' }} color='white' boxShadow='md'>Join Our Community</Button>
+          
+            <Button bg='#E05D2F' w='210px' h={{ base: '45px', lg: '47px' }} color='white' boxShadow='md'>
+              <a href='https://gdg.community.dev/gdg-ibadan/' target='_blank'>
+                Join Our Community
+              </a>
+            </Button>
         </Box>
       </Box>
 
       <Flex
         justifyContent={{base: 'center', lg: 'space-around'}}
         alignItems='center'
-        w='100%'
+        w='90%'
         mx='auto'
         flexWrap='wrap'
         mt='8rem'
@@ -131,7 +138,7 @@ const Home = () => {
             among tech enthusiasts of all levels. Whether you're a beginner or
             an expert, our community welcomes you.
           </Text>
-          <Button bg='#E05D2F' w='150px' h={{base: '40px', lg: '45px'}} color='white' boxShadow='md'>Know More</Button>
+          <Button bg='#E05D2F' w='150px' h={{base: '43px', lg: '45px'}} color='white' boxShadow='md'>Know More</Button>
         </Box>
         <Box 
         w={{ base: "100%", lg: "50%" }}
@@ -141,7 +148,7 @@ const Home = () => {
         </Box>
       </Flex>
 
-      <Box pt={{ base: "27px", lg: "134px" }}>
+      <Box pt={{ base: "27px", lg: "134px" }} w='90%' mx='auto'>
         <Sponsors />
         <Box
           display={{ base: "flex", lg: "none" }}
@@ -164,7 +171,7 @@ const Home = () => {
         color="#fff"
         position="relative"
         mx='auto'
-        w='100%'
+        w='90%'
         height={{ base: "103rem", lg: "650px" }}
       >
         <Box pt={{ base: "4rem" }}>
@@ -252,7 +259,6 @@ const Home = () => {
       </Box>
 
       <Organisers />
-      {/* <Footer /> */}
     </>
   );
 };

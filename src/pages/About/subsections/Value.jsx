@@ -8,7 +8,7 @@ import Vector from '../../../assets/Vector.png'
 
 const Value = () => {
   return (
-    <Box w='100%'>
+    <Box w='90%' mx='auto'>
         <Stack direction={{base: 'column', md: 'column', lg: 'row'}} justifyContent={{base: 'center', lg: 'space-between'}} alignItems='center'>
               <Box w={{base: '90%', md: '100%', lg: '35%'}} mb='8'>
                   <Heading fontSize={{base: 35, lg: 40}} fontWeight='bold' mb='6' color='#1E3747'>Value Statement</Heading>
@@ -57,7 +57,7 @@ export default Value
 
 export const Cards = ({hText, hColor, text, icon}) => {
     return (
-        <Box boxShadow='md' borderRadius={10} p='4' bg='white' w='270px' h={{base: 'auto', md: 'auto', lg: '270px'}} mb='5'>
+        <Box boxShadow='md' borderRadius={10} p='4' bg='white' w='270px' h={{base: '270', md: 'auto', lg: '270px'}} mb='5'>
             <Stack mb='3' direction='row' spacing={3} alignItems='center'>
                 <Box w='30px' h='30px'><Image src={icon} w='100%' /></Box>
                 <Heading fontSize={16} color={hColor}>{hText}</Heading>

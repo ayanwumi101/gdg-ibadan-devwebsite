@@ -25,13 +25,10 @@ const Event = () => {
   return (
     <>
       <Box
-        w="100%"
+        w="90%"
         height="auto"
         mt='8'
         mx='auto'
-        // mt={{ base: "5.1rem", lg: "4.5rem" }}
-        // ml={{ base: "20px", lg: "50px" }}
-        // mr={{ base: "20px", lg: "50px" }}
         position="relative"
       >
         <Box height={{ base: "732px", lg: '100%' }}>
@@ -56,7 +53,7 @@ const Event = () => {
         Upcoming Events
       </Text>
       <Box
-        w='90%'
+        w='80%'
         mx='auto'
         display='flex'
         justifyContent='space-between'
@@ -100,7 +97,7 @@ const Event = () => {
       </Box>
 
       <Flex
-        w='90%'
+        w='80%'
         mx='auto'
         justifyContent={{base: 'center', lg: 'space-between'}}
         flexWrap='wrap'
@@ -112,7 +109,7 @@ const Event = () => {
       </Flex>
 
       <Flex
-        w='90%'
+        w='80%'
         mx='auto'
         justifyContent={{ base: 'center', lg: 'space-between' }}
         flexWrap='wrap'
@@ -125,7 +122,7 @@ const Event = () => {
       <Box
         textAlign="center"
         pt={{ base: "0px", lg: "60px" }}
-        pb={{ base: "0px", lg: "96px" }}
+        // pb={{ base: "0px", lg: "96px" }}
         display={{ base: "none", lg: "block" }}
         color="#E05D2F"
       >
