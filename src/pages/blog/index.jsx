@@ -24,7 +24,7 @@ import {
 import Testing from "../../components/testing";
 import Design1 from "../../assets/Frame 1000004323.png";
 import Design2 from "../../assets/Frame 1000004323 (1).png";
-import Design3 from "../../assets/image.png";
+import Design3 from "../../assets/Image.png";
 
 const Blog = () => {
   return (
