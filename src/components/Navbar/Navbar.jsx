@@ -152,7 +152,7 @@ export const SideNav = ({setOpenModal}) => {
                   GDG Ibadan <ChevronDownIcon />
                 </MenuButton>
                 <MenuList>
-                <Link to='/about'>
+                <Link to='/about' onClick={() => setOpenModal(false)}>
                   <MenuItem as="a" href="#" fontSize={14}>
                     <Flex alignItems='center' gap={2}>
                       <Image src={aboutIcon} />
@@ -161,7 +161,7 @@ export const SideNav = ({setOpenModal}) => {
                   </MenuItem>
                 </Link>
 
-                <Link to='/jobs'>
+                <Link to='/jobs' onClick={() => setOpenModal(false)}>
                   <MenuItem as='a' href='#' fontSize={14}>
                     <Flex alignItems='center' gap={2}>
                       <Image src={jobIcon} />
