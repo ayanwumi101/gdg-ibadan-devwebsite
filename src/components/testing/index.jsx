@@ -1,7 +1,6 @@
 "use client";
-import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, Image } from "@chakra-ui/react";
 import React from "react";
-import Image from "next/image";
 import BlueImg from "../../assets/Image.png";
 
 const Testing = () => {

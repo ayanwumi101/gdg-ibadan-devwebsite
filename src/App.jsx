@@ -9,6 +9,8 @@ import Event from './pages/event/page'
 import Signin from './pages/Signin/Signin'
 import Signup from './pages/Signup/Signup'
 import EmailVerification from './pages/EmailVerification/EmailVerification'
+import Blog from './pages/blog'
+import ErrorPage from './pages/404'
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
           <Route exact path='/signin' element={<Signin />} />
           <Route exact path='/signup' element={<Signup />} />
           <Route exact path='/verification' element={<EmailVerification />} />
+          <Route exact path='/blog' element={<Blog />} />
           <Route path='/events' element={<Event />} />
+          <Route exact path='*' element={<ErrorPage />} />
           {/* <Route path='/contact' element={<Layout />} />
           <Route path='/login' element={<Layout />} /> */}
         </Routes>

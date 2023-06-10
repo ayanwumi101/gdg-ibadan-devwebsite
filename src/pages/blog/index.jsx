@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Navbar from "../../components/navbar";
 import {
   Box,
   Button,
@@ -13,10 +12,9 @@ import {
   IconButton,
   Stack,
   CardBody,
-  Card,
+  Card, Image
 } from "@chakra-ui/react";
 import BlogImage from "../../assets/about (4).png";
-import Image from "next/image";
 import MobileImage from "../../assets/about (5).png";
 import {
   ChevronLeftIcon,
@@ -24,14 +22,12 @@ import {
   SearchIcon,
 } from "@chakra-ui/icons";
 import Testing from "../../components/testing";
-import Footer from "../../components/footer";
 import Design1 from "../../assets/Frame 1000004323.png";
 import Design2 from "../../assets/Frame 1000004323 (1).png";
 
 const Blog = () => {
   return (
     <>
-      <Navbar />
       <Box
         maxW="100%"
         height="auto"
@@ -316,8 +312,6 @@ const Blog = () => {
           </Box>
         </Box>
       </Box>
-
-      <Footer />
     </>
   );
 };

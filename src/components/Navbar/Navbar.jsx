@@ -35,7 +35,7 @@ const Navbar = () => {
     <>
     {openModal && <SideNav setOpenModal={setOpenModal} />}
     {location.pathname !== '/signin' && location.pathname !== '/signup' && location.pathname !== '/verification' && 
-   ( <Box py="3" position='sticky' top='0' zIndex='2' bg='white'>
+   ( <Box py="3" position='sticky' top='0' h='70px' zIndex='2' bg='white' w='100%'>
       <Box w="100%" mx="auto">
         <Flex alignItems="center" justifyContent="space-between">
           <Box>
@@ -72,7 +72,7 @@ const Navbar = () => {
             {location.pathname === "/" ? 
             (
               <Link to='/signin'>
-                <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Register </Button>
+                <Button bg='#E05D2F' w='150px' h='43px' color='white' boxShadow='md'>Register </Button>
               </Link>
             ) 
             :

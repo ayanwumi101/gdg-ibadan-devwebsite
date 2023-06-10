@@ -1,16 +1,12 @@
 "use client";
 import React from "react";
-import Navbar from "../../components/navbar";
-import { Box, Text } from "@chakra-ui/react";
-import Image from "next/image";
+import { Box, Text, Image } from "@chakra-ui/react";
 import NFImage from "../../assets/404.png";
-import Footer from "../../components/footer";
+
 
 const NotFoundPage = () => {
   return (
     <>
-      <Navbar />
-
       <Box
         maxW="100%"
         height="auto"
@@ -49,7 +45,6 @@ const NotFoundPage = () => {
           </Text>
         </Box>
       </Box>
-      <Footer />
     </>
   );
 };
