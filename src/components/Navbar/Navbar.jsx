@@ -143,7 +143,7 @@ export const SideNav = ({setOpenModal}) => {
                   <MenuItem onClick={() => setOpenModal(false)}>Job Board</MenuItem>
                 </MenuList>
               </Menu>
-              <Text fontWeight="medium" fontSize={15} onClick={() => setOpenModal(false)}>Events</Text>
+              <Link to='/events'><Text fontWeight="medium" fontSize={15} onClick={() => setOpenModal(false)}>Events</Text></Link>
               <Text fontWeight="medium" fontSize={15} onClick={() => setOpenModal(false)}>Blog</Text>
               <Link to='/signin'>
                 <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md' onClick={() => setOpenModal(false)}>Register </Button>
