@@ -1,11 +1,12 @@
 "use client";
 import { Box, Flex, Heading, Image, Button } from "@chakra-ui/react";
-import React from "react";
+// import React from "react";
 import Lead from "../../assets/lead-img.png";
 import CoOrganiser from "../../assets/co-organiser.png";
 import Organiser from "../../assets/orgaiser.png";
 import Secretary from "../../assets/secretary.png";
-import Buttons from "../buttons";
+// import Buttons from "../buttons";
+// import Rectangle from "../../assets/Rectangle 9789.png"
 
 const Organisers = () => {
   return (
@@ -21,7 +22,7 @@ const Organisers = () => {
           lineHeight={{ base: "40px", lg: "57px" }}
           fontWeight="500"
           pt={{ base: "61px", lg: "93px" }}
-          //   fontFamily="Recoleta, sans-serif"
+        //   fontFamily="Recoleta, sans-serif"
         >
           Let’s Meet the Organisers
         </Heading>
@@ -36,28 +37,26 @@ const Organisers = () => {
         >
           <Box>
             <Image src={Lead} alt={""} />
-            <Box
-            //   background="#fff"
-            //   width="300px"
-            //   height="200px"
-            //   transform="translate(-50%, -50%)"
-            >
-              <Heading
-                color="#E05D2F"
-                fontSize="16px"
-                lineHeight="24px"
-                fontWeight="500"
-              >
-                Lead
-              </Heading>
-              <Box
-                as="p"
-                fontSize="14px"
-                lineHeight="20px"
-                fontWeight="400"
-                color="#1E3747"
-              >
-                Adeleke Oshin
+
+            <Box>
+              <Box >
+                <Heading
+                  color="#E05D2F"
+                  fontSize="16px"
+                  lineHeight="24px"
+                  fontWeight="500"
+                >
+                  Lead
+                </Heading>
+                <Box
+                  as="p"
+                  fontSize="14px"
+                  lineHeight="20px"
+                  fontWeight="400"
+                  color="#1E3747"
+                >
+                  Adeleke Oshin
+                </Box>
               </Box>
             </Box>
           </Box>

@@ -1,6 +1,6 @@
 import React from 'react'
-import {Box, Heading} from '@chakra-ui/react'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { Box, Heading } from '@chakra-ui/react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Homepage/Home'
 import About from './pages/About'
 import Navbar from './components/Navbar/Navbar'
@@ -13,6 +13,7 @@ import Blog from './pages/blog'
 import ErrorPage from './pages/404'
 import Jobs from './pages/Jobs'
 import ScrollToTop from './pages/ScrollToTop'
+import DareEvent from './pages/dareevent/page'
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route exact path='/blog' element={<Blog />} />
           <Route path='/events' element={<Event />} />
           <Route exact path='/jobs' element={<Jobs />} />
+          <Route exact path='/dareevent' element={<DareEvent />} />
           <Route exact path='*' element={<ErrorPage />} />
         </Routes>
         <Footer />

@@ -12,7 +12,7 @@ import {
   MenuButton,
   MenuItem,
   MenuList,
-  Text,Image
+  Text, Image
 } from "@chakra-ui/react";
 import EventImg from "../../assets/aboutImg.png";
 import Group from "../../assets/groups.png";
@@ -64,12 +64,12 @@ const Event = () => {
           fontSize="16px"
           alignItems='center'
           fontWeight="400"
-          w={{base: '100%', lg: '50%'}}
+          w={{ base: '100%', lg: '50%' }}
           gap={6}
           mb='5'
-          flexWrap={{base: 'wrap', lg: 'nowrap'}}
+          flexWrap={{ base: 'wrap', lg: 'nowrap' }}
         >
-          <Input placeholder="Date" w={{base: '100%', lg: '200px'}} />
+          <Input placeholder="Date" w={{ base: '100%', lg: '200px' }} />
           <Input placeholder="Keyword" w={{ base: '100%', lg: '200px' }} />
           <Button bg='#E05D2F' w={{ base: '100%', lg: '200px' }} h='43px' color='white' boxShadow='md'>Find Event</Button>
         </Flex>
@@ -79,16 +79,16 @@ const Event = () => {
           lineHeight="24px"
           fontWeight="500"
         >
-          
+
           <Menu>
             <MenuButton as={Button} rightIcon={<ChevronDownIcon />} fontSize={15}>
               Upcoming Events
             </MenuButton>
             <MenuList>
-              <MenuItem as={Link} href="/pastevent">
+              <MenuItem as={Link} href="https://gdg.community.dev/gdg-ibadan/#past-events">
                 Past Events
               </MenuItem>
-              <MenuItem as={Link} href="">
+              <MenuItem as={Link} href="https://gdg.community.dev/gdg-ibadan/#upcoming-events">
                 Future Events
               </MenuItem>
             </MenuList>
@@ -99,7 +99,7 @@ const Event = () => {
       <Flex
         w='80%'
         mx='auto'
-        justifyContent={{base: 'center', lg: 'space-between'}}
+        justifyContent={{ base: 'center', lg: 'space-between' }}
         flexWrap='wrap'
         alignItems='center'
       >
