@@ -85,10 +85,10 @@ const Event = () => {
               Upcoming Events
             </MenuButton>
             <MenuList>
-              <MenuItem as={Link} href="https://gdg.community.dev/gdg-ibadan/#past-events">
+              <MenuItem as={Link} href="https://gdg.community.dev/gdg-ibadan/#past-events" target="_blank">
                 Past Events
               </MenuItem>
-              <MenuItem as={Link} href="https://gdg.community.dev/gdg-ibadan/#upcoming-events">
+              <MenuItem as={Link} href="https://gdg.community.dev/gdg-ibadan/#upcoming-events" target='_blank'>
                 Future Events
               </MenuItem>
             </MenuList>

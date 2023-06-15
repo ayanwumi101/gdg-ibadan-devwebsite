@@ -6,9 +6,8 @@ import {
   Flex,
   Heading,
   Icon,
-  Text,
+  Text, Image
 } from "@chakra-ui/react";
-import Image from "next/image";
 import React from "react";
 import Line from "../../assets/Pattern 2.png";
 import Calendar from "../../assets/image 2.png";
@@ -31,10 +30,9 @@ import Footer from "../../components/footer";
 const DareEvent = () => {
   return (
     <>
-      <Navbar />
       <Box
         bgColor="#1E3747"
-        mt={{ base: "5.1rem", lg: "4.5rem" }}
+        mt={{ base: "5.1rem", lg: "3rem" }}
         ml={{ base: "20px", lg: "50px" }}
         mr={{ base: "20px", lg: "50px" }}
         borderRadius="24px"
@@ -205,7 +203,6 @@ const DareEvent = () => {
         </Box>
       </Box>
       <Organisers />
-      <Footer />
     </>
   );
 };
