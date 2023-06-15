@@ -269,7 +269,6 @@ const Footer = () => {
                   fontSize="15px"
                   fontWeight="400"
                   lineHeight="20px"
-                  cursor="pointer"
                   // display="block"
                 >
                   <Box as="li" pb={{ base: "16px", lg: "24px" }}>
@@ -304,7 +303,6 @@ const Footer = () => {
                   fontWeight="400"
                   lineHeight="20px"
                   pt={{ base: "32px", lg: "24px" }}
-                  cursor="pointer"
                 >
                   <Box as="li">
                     <Link href="">Terms/Privacy</Link>
