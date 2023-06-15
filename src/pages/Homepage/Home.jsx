@@ -13,8 +13,12 @@ import carousel1 from "../../assets/carousel-image2.png";
 import carousel2 from "../../assets/carousel-image3.png";
 import Buttons from "../../components/buttons";
 import About from "../../assets/images asset.png";
+import Lacasera from "../../assets/lacasera.png";
+import Cardify from "../../assets/cardify.png";
 import Ship from "../../assets/ship.png";
 import Altschool from "../../assets/Altschool.png";
+import Heyfood from "../../assets/heyfood.png";
+import Halal from "../../assets/halal.png";
 import Line from "../../assets/Line.png";
 import Cards from "../../components/cards";
 import Organisers from "../../components/organisers";
@@ -26,6 +30,16 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Link } from "react-router-dom";
+import { keyframes } from '@emotion/react';
+
+const slideAnimation = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-303vw);
+  }
+`;
 
 const Home = () => {
   return (
@@ -45,7 +59,7 @@ const Home = () => {
             }}
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
-            style={{height: '100%', objectFit: 'cover', borderRadius: '24px'}}
+            style={{ height: '100%', objectFit: 'cover', borderRadius: '24px' }}
           >
             <SwiperSlide><Image src={Header} alt="" borderRadius='24px' objectFit='cover' h='100%' w='100%' /></SwiperSlide>
             <SwiperSlide><Image src={carousel1} alt="" style={{ borderRadius: "24px", objectFit: "cover", height: "100%" }} /></SwiperSlide>
@@ -81,17 +95,17 @@ const Home = () => {
             </Text>{" "}
             website, where tech enthusiasts gather to share ideas and knowledge.
           </Text>
-          
-            <Button bg='#E05D2F' w='210px' h={{ base: '45px', lg: '47px' }} color='white' boxShadow='md'>
-              <a href='https://gdg.community.dev/gdg-ibadan/' target='_blank'>
-                Join Our Community
-              </a>
-            </Button>
+
+          <Button bg='#E05D2F' w='210px' h={{ base: '45px', lg: '47px' }} color='white' boxShadow='md'>
+            <a href='https://gdg.community.dev/gdg-ibadan/' target='_blank'>
+              Join Our Community
+            </a>
+          </Button>
         </Box>
       </Box>
 
       <Flex
-        justifyContent={{base: 'center', lg: 'space-around'}}
+        justifyContent={{ base: 'center', lg: 'space-around' }}
         alignItems='center'
         w='90%'
         mx='auto'
@@ -140,9 +154,9 @@ const Home = () => {
           </Text>
           <Link to='/about'><Button bg='#E05D2F' w='150px' h={{ base: '43px', lg: '45px' }} color='white' boxShadow='md'>Know More</Button></Link>
         </Box>
-        <Box 
-        w={{ base: "100%", lg: "50%" }}
-        mb='10'
+        <Box
+          w={{ base: "100%", lg: "50%" }}
+          mb='10'
         >
           <Image src={About} w='100%' alt="" />
         </Box>
@@ -150,7 +164,7 @@ const Home = () => {
 
       <Box pt={{ base: "27px", lg: "134px" }} w='90%' mx='auto'>
         <Sponsors />
-        <Box
+        {/* <Box
           display={{ base: "flex", lg: "none" }}
           pl="0px"
           pr="30px"
@@ -158,11 +172,18 @@ const Home = () => {
           pb="85px"
           alignItems="center"
           justifyContent="space-between"
+          whiteSpace="nowrap"
+          transition="all 1s ease"
+          overflow="hidden"
+          animation={`${slideAnimation} 40s linear infinite`}
         >
-          <Image src={HCardify} alt={""} />
+          <Image src={Lacasera} alt={""} />
+          <Image src={Cardify} alt={""} />
           <Image src={Ship} alt={""} />
           <Image src={Altschool} alt={""} />
-        </Box>
+          <Image src={Heyfood} alt={""} />
+          <Image src={Halal} alt={""} />
+        </Box> */}
       </Box>
 
       <Box
@@ -181,7 +202,7 @@ const Home = () => {
         <Box
           textAlign="center"
           position="absolute"
-          top={{base: '3.5rem', lg: '5rem'}}
+          top={{ base: '3.5rem', lg: '5rem' }}
           right="0"
           left="0"
           bottom='0'
@@ -202,14 +223,14 @@ const Home = () => {
             // width="563px"
             mr={{ base: "18.97px", lg: "313px" }}
             fontFamily="'Google Sans Display', sans-serif"
-            mb={{base: '20px'}}
+            mb={{ base: '20px' }}
           >
             Fostering collaboration and learning among tech of all enthusiasts
             level
           </Box>
         </Box>
         <Flex
-          // justifyContent='space-between'
+          justifyContent='center'
           // alignItems='center'
           flexWrap='wrap'
           // p='5'
@@ -221,7 +242,7 @@ const Home = () => {
           // bottom={{ base: "0rem", lg: "0rem" }}
           cursor="pointer"
           top={{ base: "7rem", lg: "-7rem" }}
-          // display={{ base: "block", lg: "flex" }}
+        // display={{ base: "block", lg: "flex" }}
         >
           <Cards
             hText={"Access"}

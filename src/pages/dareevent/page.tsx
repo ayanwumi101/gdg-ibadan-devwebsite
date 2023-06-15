@@ -12,7 +12,7 @@ import Image from "next/image";
 import React from "react";
 import Line from "../../assets/Pattern 2.png";
 import Calendar from "../../assets/image 2.png";
-import Navbar from "../../components/navbar";
+import Navbar from "../../components/Navbar/Navbar";
 import {
   DangerIcon,
   FacebookIcon,
