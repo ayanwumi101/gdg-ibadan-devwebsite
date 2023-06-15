@@ -138,7 +138,7 @@ const Home = () => {
             among tech enthusiasts of all levels. Whether you're a beginner or
             an expert, our community welcomes you.
           </Text>
-          <Button bg='#E05D2F' w='150px' h={{base: '43px', lg: '45px'}} color='white' boxShadow='md'>Know More</Button>
+          <Link to='/about'><Button bg='#E05D2F' w='150px' h={{ base: '43px', lg: '45px' }} color='white' boxShadow='md'>Know More</Button></Link>
         </Box>
         <Box 
         w={{ base: "100%", lg: "50%" }}

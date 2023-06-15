@@ -12,12 +12,14 @@ import EmailVerification from './pages/EmailVerification/EmailVerification'
 import Blog from './pages/blog'
 import ErrorPage from './pages/404'
 import Jobs from './pages/Jobs'
+import ScrollToTop from './pages/ScrollToTop'
 
 
 function App() {
   return (
     <Box w='100%' mx='auto'>
       <Router>
+        <ScrollToTop />
         <Navbar />
         <Routes>
           <Route exact path='/' element={<Home />} />

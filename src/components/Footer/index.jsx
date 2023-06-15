@@ -4,7 +4,6 @@ import {
   Flex,
   Heading,
   Icon,
-  Link,
   ListItem,
   Text,
   UnorderedList, Button, Image
@@ -15,8 +14,8 @@ import Logo from "../logo";
 // import { LinkedinIcon, SlackIcon, TwitterIcon } from "../icons";
 import Slack from '../../assets/slack.svg'
 import linkedin from '../../assets/linkedin-logo.svg'
-import twitter from '../../assets/twitter-bird.svg'
-import { useLocation } from "react-router-dom";
+import twitter from '../../assets/twitter-logo.svg'
+import { Link, useLocation } from "react-router-dom";
 
 const Footer = () => {
   const location = useLocation();
@@ -80,7 +79,7 @@ const Footer = () => {
                   mr={{ base: "70px", lg: "90px" }}
                   ml={{ base: "17px", lg: "0px" }}
                 >
-                  <Button bg='#E05D2F' w='210px' color='white' fontSize={15} h='55px'>Join our community</Button>
+                  <a href="https://gdg.community.dev/gdg-ibadan/" target='_blank'><Button bg='#E05D2F' w='210px' color='white' fontSize={15} h='55px'>Join our community</Button></a>
                 </Box>
               </Flex>
               <Box display={{ base: "none" }}>
@@ -227,7 +226,7 @@ const Footer = () => {
               // pb="119px"
             >
               <Box mt='8'>
-                <Logo />
+                <Link to='/'><Logo /></Link>
                 <Text
                   fontSize={15}
                   fontWeight="400"
@@ -248,10 +247,10 @@ const Footer = () => {
                     <Image src={Slack} />
                   </a>
                   <a href="https://twitter.com/gdgibadan?s=11&t=q2B3F1i2ySbJLEmnk5TtKQ" target="_blank">
-                    <Image src={linkedin} />
-                  </a>
-                  <a href="" target="_blank">
                     <Image src={twitter} />
+                  </a>
+                  <a href="https://www.linkedin.com/company/gdg-ibadan/" target="_blank">
+                    <Image src={linkedin} />
                   </a>                  
                 </Flex>
               </Box>
@@ -267,33 +266,33 @@ const Footer = () => {
                   Quick Links
                 </Text>
                 <Box
-                  fontSize="16px"
+                  fontSize="15px"
                   fontWeight="400"
                   lineHeight="20px"
                   cursor="pointer"
                   // display="block"
                 >
                   <Box as="li" pb={{ base: "16px", lg: "24px" }}>
-                    <Link href="/about">About GDG Ibadan</Link>
+                    <Link to="/about">About GDG Ibadan</Link>
                   </Box>
 
                   <Box pb={{ base: "16px", lg: "24px" }} as="li">
-                    <Link href="/event">Upcoming Events</Link>
+                    <Link to="/events">Upcoming Events</Link>
                   </Box>
 
                   <Box pb={{ base: "16px", lg: "24px" }} as="li">
-                    <Link href="/blog">Blog</Link>
+                    <Link to="/blog">Blog</Link>
                   </Box>
 
                   <Box pb={{ base: "16px", lg: "24px" }} as="li">
-                    <Link href="">Job Board</Link>
+                    <Link to='/jobs'>Job Board</Link>
                   </Box>
                 </Box>
               </Box>
 
               <Box pt={{ base: "15px", lg: "0px" }} mt='8'>
                 <Text
-                  fontSize="16px"
+                  fontSize="15px"
                   fontWeight="500"
                   lineHeight="20px"
                   color="#E05D2F"
@@ -301,7 +300,7 @@ const Footer = () => {
                   Legal
                 </Text>
                 <Box
-                  fontSize="16px"
+                  fontSize="15px"
                   fontWeight="400"
                   lineHeight="20px"
                   pt={{ base: "32px", lg: "24px" }}
