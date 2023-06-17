@@ -5,6 +5,7 @@ import Lead from "../../assets/lead-img.png";
 import CoOrganiser from "../../assets/co-organiser.png";
 import Organiser from "../../assets/orgaiser.png";
 import Secretary from "../../assets/secretary.png";
+import { Link } from "react-router-dom";
 // import Buttons from "../buttons";
 // import Rectangle from "../../assets/Rectangle 9789.png"
 
@@ -149,7 +150,7 @@ const Organisers = () => {
           paddingTop={{ base: "60px", lg: "55px" }}
           paddingBottom={{ base: "29px", lg: "76px" }}
         >
-          <Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Contact Us</Button>
+          <Link to='/contact'><Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Contact Us</Button></Link>
         </Box>
       </Box>
     </>

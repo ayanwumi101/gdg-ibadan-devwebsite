@@ -14,6 +14,7 @@ import ErrorPage from './pages/404'
 import Jobs from './pages/Jobs'
 import ScrollToTop from './pages/ScrollToTop'
 import DareEvent from './pages/dareevent/page'
+import Contact from './pages/Contact/Contact'
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
           <Route path='/events' element={<Event />} />
           <Route exact path='/jobs' element={<Jobs />} />
           <Route exact path='/dareevent' element={<DareEvent />} />
+          <Route exact path='/contact' element={<Contact />} />
           <Route exact path='*' element={<ErrorPage />} />
         </Routes>
         <Footer />

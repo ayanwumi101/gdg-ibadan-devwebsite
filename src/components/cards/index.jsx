@@ -1,4 +1,4 @@
-"use client";
+"use client";  
 import React from "react";
 import { Box, Card, Heading, Text, Image } from "@chakra-ui/react";
 import Access from "../../assets/access.png";
@@ -7,7 +7,7 @@ export default function Cards({ hText, paragraph, background, color, mb }) {
   return (
     <>
       <Card
-        width={{ base: "100%px", md: '250px', lg: "260px" }}
+        width={{ base: "100%px", md: '250px', lg: "26                         0px" }}
         height={{ base: '300px', lg: "277px" }}
         background={background}
         color="#fff"

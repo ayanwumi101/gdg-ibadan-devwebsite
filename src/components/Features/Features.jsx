@@ -1,14 +1,15 @@
 import React from 'react'
 import Cards from '../cards'
 import { Box, Stack, Heading, Text } from '@chakra-ui/react'
+import Line from '../../assets/Line.png'
 
 const Features = () => {
   return (
-    <Box w='90%' mx='auto' p='8' bg='#1E3747' borderRadius='24px'>
+    <Box w='90%' mx='auto' p={[5, 6, 8]} bg='#1E3747' borderRadius='24px' bgImage={Line} backgroundRepeat='no-repeat' >
 
-      <Box textAlign='center' my='12' color='white'>
-        <Heading fontSize={45} mb='5'>Features</Heading>
-        <Text>Fostering collaboration and learning among tech of all enthusiasts level</Text>
+      <Box textAlign='center' mt='12' mb='14' color='white'>
+        <Heading fontSize={45} mb='8'>Features</Heading>
+        <Text fontSize={22}>Fostering collaboration and learning among tech of all enthusiasts level</Text>
       </Box>
 
       <Stack alignItems='center' spacing={[7, 5, 0]} direction={['column', 'column', 'row']} justifyContent='space-between'>
