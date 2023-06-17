@@ -3,7 +3,7 @@ import React from "react";
 import { Box, Card, Heading, Text, Image } from "@chakra-ui/react";
 import Access from "../../assets/access.png";
 
-export default function Cards({ hText, paragraph, background, color }) {
+export default function Cards({ hText, paragraph, background, color, mb }) {
   return (
     <>
       <Card
@@ -13,7 +13,6 @@ export default function Cards({ hText, paragraph, background, color }) {
         color="#fff"
         borderRadius="32px"
         fontFamily="'Google Sans Display', sans-serif"
-        marginBottom={{ base: "31.34px" }}
         boxShadow="md"
       >
         <Box

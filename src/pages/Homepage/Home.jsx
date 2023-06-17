@@ -20,7 +20,6 @@ import Altschool from "../../assets/Altschool.png";
 import Heyfood from "../../assets/heyfood.png";
 import Halal from "../../assets/halal.png";
 import Line from "../../assets/Line.png";
-import Cards from "../../components/cards";
 import Organisers from "../../components/organisers";
 import HCardify from "../../assets/image 3.png";
 import Sponsors from "../../components/sponsors";
@@ -31,6 +30,7 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Link } from "react-router-dom";
 import { keyframes } from '@emotion/react';
+import Features from "../../components/Features/Features";
 
 const slideAnimation = keyframes`
   0% {
@@ -164,121 +164,8 @@ const Home = () => {
 
       <Box pt={{ base: "27px", lg: "134px" }} w='90%' mx='auto'>
         <Sponsors />
-        {/* <Box
-          display={{ base: "flex", lg: "none" }}
-          pl="0px"
-          pr="30px"
-          pt="32px"
-          pb="85px"
-          alignItems="center"
-          justifyContent="space-between"
-          whiteSpace="nowrap"
-          transition="all 1s ease"
-          overflow="hidden"
-          animation={`${slideAnimation} 40s linear infinite`}
-        >
-          <Image src={Lacasera} alt={""} />
-          <Image src={Cardify} alt={""} />
-          <Image src={Ship} alt={""} />
-          <Image src={Altschool} alt={""} />
-          <Image src={Heyfood} alt={""} />
-          <Image src={Halal} alt={""} />
-        </Box> */}
       </Box>
-
-      <Box
-        bgColor="#1E3747"
-        borderRadius="24px"
-        color="#fff"
-        position="relative"
-        mx='auto'
-        w='90%'
-        height={{ base: "103rem", lg: "650px" }}
-      >
-        <Box pt={{ base: "4rem" }}>
-          <Image src={Line} alt={""} />
-        </Box>
-
-        <Box
-          textAlign="center"
-          position="absolute"
-          top={{ base: '3.5rem', lg: '5rem' }}
-          right="0"
-          left="0"
-          bottom='0'
-        >
-          <Heading
-            fontSize={{ base: "32px", lg: "45px" }}
-            lineHeight={{ base: "40px", lg: "60px" }}
-            fontWeight="500"
-          >
-            Features
-          </Heading>
-          <Box
-            fontSize={{ base: "22px", lg: "22px" }}
-            lineHeight={{ base: "33px", lg: "33px" }}
-            fontWeight="400"
-            pt={{ base: "63px", lg: "27px" }}
-            ml={{ base: "18.97px", lg: "313px" }}
-            // width="563px"
-            mr={{ base: "18.97px", lg: "313px" }}
-            fontFamily="'Google Sans Display', sans-serif"
-            mb={{ base: '20px' }}
-          >
-            Fostering collaboration and learning among tech of all enthusiasts
-            level
-          </Box>
-        </Box>
-        <Flex
-          justifyContent='center'
-          // alignItems='center'
-          flexWrap='wrap'
-          // p='5'
-          // gap={2}
-          pl={{ base: "20px", lg: "25px" }}
-          pr={{ base: "13px", lg: "25px" }}
-          columnGap="15px"
-          position="relative"
-          // bottom={{ base: "0rem", lg: "0rem" }}
-          cursor="pointer"
-          top={{ base: "7rem", lg: "-7rem" }}
-        // display={{ base: "block", lg: "flex" }}
-        >
-          <Cards
-            hText={"Access"}
-            paragraph={
-              "Access a wealth of knowledge and resources in our extensive library of tech content."
-            }
-            background="#4285F4"
-            color="#fff"
-          />
-          <Cards
-            hText={"Connect"}
-            paragraph={
-              "Connect with fellow tech enthusiasts through our online community."
-            }
-            background="#34A853"
-            color="#fff"
-          />
-          <Cards
-            hText={"Events"}
-            paragraph={
-              "Attend exclusive events and meetups to learn from industry experts and expand your network."
-            }
-            background="#DA5847"
-            color="#fff"
-          />
-          <Cards
-            hText={"Discussion Forum"}
-            paragraph={
-              "Join groups and discussions centered around your specific interests within the tech industry."
-            }
-            background="#FBBC04"
-            color="#fff"
-          />
-        </Flex>
-      </Box>
-
+      <Features />
       <Organisers />
     </>
   );
