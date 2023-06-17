@@ -7,7 +7,7 @@ export default function Cards({ hText, paragraph, background, color, mb }) {
   return (
     <>
       <Card
-        width={{ base: "100%px", md: '250px', lg: "250px" }}
+        width={{ base: "100%px", md: '250px', lg: "260px" }}
         height={{ base: '300px', lg: "277px" }}
         background={background}
         color="#fff"
