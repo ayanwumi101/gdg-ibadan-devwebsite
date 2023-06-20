@@ -100,12 +100,12 @@ const Contact = () => {
 
                         <Box mb='7'>
                             <form onSubmit={handleClick} type='POST'>
-                                <Stack w='100%' direction='row' spacing={6} mb='2'>
-                                    <Box mb='5' w='50%'>
+                                <Stack w='100%' direction={['column', 'row', 'row']} spacing={6} mb='2'>
+                                    <Box mb='5' w={['100%', '50%', '50%']}>
                                         <FormLabel color='#1E3747' fontWeight='medium' fontSize={15}>First Name</FormLabel>
                                         <Input type='text' name='name' placeholder='first name' w='100%' value={name} onChange={(e) => setName(e.target.value)} />
                                     </Box>
-                                    <Box mb='5' w='50%'>
+                                    <Box mb='5' w={['100%', '50%', '50%']}>
                                         <FormLabel color='#1E3747' fontWeight='medium' fontSize={15}>Last Name</FormLabel>
                                         <Input type='text' name='title' placeholder='last name' w='100%' value={title} onChange={(e) => setTitle(e.target.value)} />
                                     </Box>
