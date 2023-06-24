@@ -60,8 +60,8 @@ const Contact = () => {
                         Any question or remarks? Just write us a message!
                     </Text>
                 </Box>
-                <Stack direction={{ base: 'column', lg: 'row' }} justifyContent='space-between' alignItems='flex-start' w={['97%', '90%', '90%']} mx='auto' boxShadow='2xl' p='3' borderRadius={24}>
-                    <Box h='620px' borderRadius={12} maxW='490px' bg='#172B37' p='10' bgImg={shadowBg} backgroundRepeat='no-repeat' backgroundPosition='bottom right'>
+                <Stack direction={{ base: 'column', lg: 'row' }} justifyContent='space-between' alignItems='flex-start' w={['100%', '90%', '90%']} mx='auto' boxShadow='2xl' p='3' borderRadius={24}>
+                    <Box h='620px' borderRadius={12} maxW='490px' bg='#172B37' p={[6, 8, 10]} bgImg={shadowBg} backgroundRepeat='no-repeat' backgroundPosition='bottom right'>
                         <Box>
                             <Stack color='white' direction='column'>
                                 <Box mb='16'>
