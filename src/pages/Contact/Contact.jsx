@@ -55,8 +55,8 @@ const Contact = () => {
     return (
         <Box w='100%' my='10' px={{ base: 5 }}>
                 <Box maxW={['400px', '450px', '550px']} mx='auto' textAlign='center' mb='14'>
-                    <Heading color='#1E3747' fontSize={45} mb='2'>Contact Us</Heading>
-                    <Text color='#6A7C88' fontSize={22} w={['300px', '500px', '550px']} mx='auto'>
+                    <Heading color='#1E3747' fontSize={[38, 40, 45]} mb='2'>Contact Us</Heading>
+                    <Text color='#6A7C88' fontSize={[20, 21, 22]} w={['300px', '500px', '550px']} mx='auto'>
                         Any question or remarks? Just write us a message!
                     </Text>
                 </Box>
