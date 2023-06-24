@@ -14,6 +14,7 @@ import Logo from "../logo";
 // import { LinkedinIcon, SlackIcon, TwitterIcon } from "../icons";
 import Slack from '../../assets/slack.svg'
 import linkedin from '../../assets/linkedin-logo.svg'
+import instagram from '../../assets/instagram-icon.svg'
 import twitter from '../../assets/twitter-logo.svg'
 import { Link, useLocation } from "react-router-dom";
 
@@ -243,7 +244,7 @@ const Footer = () => {
                   columnGap="25px"
                   cursor="pointer"
                 >
-                  <a href="https://gdg.community.dev/gdg-ibadan/" target='_blank'>
+                  <a href="https://gdgibadan.slack.com/?redir=%2Farchives%2FD0465RU7TL1%2Fp1672870979253869" target='_blank'>
                     <Image src={Slack} />
                   </a>
                   <a href="https://twitter.com/gdgibadan?s=11&t=q2B3F1i2ySbJLEmnk5TtKQ" target="_blank">
@@ -251,6 +252,9 @@ const Footer = () => {
                   </a>
                   <a href="https://www.linkedin.com/company/gdg-ibadan/" target="_blank">
                     <Image src={linkedin} />
+                  </a>
+                  <a href="https://instagram.com/gdgibadan" target="_blank">
+                    <Image src={instagram} />
                   </a>                  
                 </Flex>
               </Box>
