@@ -36,39 +36,66 @@ const Organisers = () => {
           display={{ base: "block", lg: "flex" }}
           alignItems="baseline"
         >
-          <Box>
-            <Image src={Lead} alt={""} />
+          <Box position="relative">
+            <Box position="relative" right="7px" top="0rem">
+              <Image src={Lead} alt={""} />
+            </Box>
 
-            <Box>
-              <Box >
-                <Heading
-                  color="#E05D2F"
-                  fontSize="16px"
-                  lineHeight="24px"
-                  fontWeight="500"
-                >
-                  Lead
-                </Heading>
-                <Box
-                  as="p"
-                  fontSize="14px"
-                  lineHeight="20px"
-                  fontWeight="400"
-                  color="#1E3747"
-                >
-                  Adeleke Oshin
-                </Box>
+            <Box position="absolute" bottom={{ base: "-12rem", lg: "-9rem" }}>
+              <Image
+                src={Rec}
+                alt={""}
+                style={{
+                  position: "relative",
+                  top: "-7.3rem",
+                  right: "4.2rem",
+                }}
+              />
+            </Box>
+            <Box
+              position="relative"
+              bottom={{ base: "15px", lg: "34px" }}
+              right={{ base: "98px", lg: "70px" }}
+            >
+              <Heading
+                color="#E05D2F"
+                fontSize="16px"
+                lineHeight="24px"
+                fontWeight="500"
+              >
+                Lead
+              </Heading>
+              <Box
+                as="p"
+                fontSize="14px"
+                lineHeight="20px"
+                fontWeight="400"
+                color="#1E3747"
+              >
+                Adeleke Oshin
               </Box>
             </Box>
           </Box>
 
-          <Box pt="14px">
-            <Image src={CoOrganiser} alt={""} />
+          <Box pt="14px" position="relative">
+            <Box position="relative" right="7px" top="0rem">
+              <Image src={CoOrganiser} alt={""} />
+            </Box>
+            <Box position="absolute" bottom={{ base: "-12rem", lg: "-9rem" }}>
+              <Image
+                src={Rec}
+                alt={""}
+                style={{
+                  position: "relative",
+                  top: "-7.3rem",
+                  right: "4.2rem",
+                }}
+              />
+            </Box>
             <Box
-            //   background="#fff"
-            //   width="300px"
-            //   height="200px"
-            //   transform="translate(-50%, -50%)"
+              position="relative"
+              bottom={{ base: "15px", lg: "34px" }}
+              right={{ base: "85px", lg: "70px" }}
             >
               <Heading
                 color="#E05D2F"
@@ -90,13 +117,25 @@ const Organisers = () => {
             </Box>
           </Box>
 
-          <Box pt="14px">
-            <Image src={Organiser} alt={""} />
+          <Box pt="14px" position="relative">
+            <Box position="relative" right="7px" top="0rem">
+              <Image src={Organiser} alt={""} />
+            </Box>
+            <Box position="absolute" bottom={{ base: "-12rem", lg: "-9rem" }}>
+              <Image
+                src={Rec}
+                alt={""}
+                style={{
+                  position: "relative",
+                  top: "-7.3rem",
+                  right: "4.2rem",
+                }}
+              />
+            </Box>
             <Box
-            //   background="#fff"
-            //   width="300px"
-            //   height="200px"
-            //   transform="translate(-50%, -50%)"
+              position="relative"
+              bottom={{ base: "15px", lg: "34px" }}
+              right={{ base: "85px", lg: "70px" }}
             >
               <Heading
                 color="#E05D2F"
@@ -118,13 +157,25 @@ const Organisers = () => {
             </Box>
           </Box>
 
-          <Box pt="14px">
-            <Image src={Secretary} alt={""} />
+          <Box pt="14px" position="relative">
+            <Box position="relative" right="7px" top="0rem">
+              <Image src={Secretary} alt={""} />
+            </Box>
+            <Box position="absolute" bottom={{ base: "-12rem", lg: "-9rem" }}>
+              <Image
+                src={Rec}
+                alt={""}
+                style={{
+                  position: "relative",
+                  top: "-7.3rem",
+                  right: "4.2rem",
+                }}
+              />
+            </Box>
             <Box
-            //   background="#fff"
-            //   width="300px"
-            //   height="200px"
-            //   transform="translate(-50%, -50%)"
+              position="relative"
+              bottom={{ base: "15px", lg: "34px" }}
+              right={{ base: "85px", lg: "70px" }}
             >
               <Heading
                 color="#E05D2F"
