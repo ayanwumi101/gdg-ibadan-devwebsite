@@ -35,49 +35,10 @@ const Organisers = () => {
           mb='10'
           flexWrap='wrap'
         >
-          <Box position='relative' w='250px' h='250px' mb={[20, 5,5]}>
-            <Image src={Lead} w='100%' objectFit='cover' />
-            <Box position='absolute' top='160px' left='-80px'>
-              <Image src={Rec} w='300px' h='220px' />
-            </Box>
-            <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
-              <Heading fontWeight='medium' fontSize='20px' color='#E05D2F' mb='1'>Lead</Heading>
-              <Text color='#1E3747' fontSize='15px' fontWeight='medium'>Adeleke Oshin</Text>
-            </Box>
-          </Box>
-
-          <Box position='relative' w='250px' h='250px' mb={[20, 5, 5]}>
-            <Image src={CoOrganiser} w='100%' objectFit='cover' />
-            <Box position='absolute' top='160px' left='-80px'>
-              <Image src={Rec} w='300px' h='220px' />
-            </Box>
-            <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
-              <Heading fontWeight='medium' fontSize='20px' color='#E05D2F' mb='1'>Co-Organizer</Heading>
-              <Text color='#1E3747' fontSize='15px' fontWeight='medium'>Peter James</Text>
-            </Box>
-          </Box>
-
-          <Box position='relative' w='250px' h='250px' mb={[20, 5, 5]}>
-            <Image src={Organiser} w='100%' objectFit='cover' />
-            <Box position='absolute' top='160px' left='-80px'>
-              <Image src={Rec} w='300px' h='220px' />
-            </Box>
-            <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
-              <Heading fontWeight='medium' fontSize='20px' color='#E05D2F' mb='1'>Organizer</Heading>
-              <Text color='#1E3747' fontSize='15px' fontWeight='medium'>Okoro John</Text>
-            </Box>
-          </Box>
-
-          <Box position='relative' w='250px' h='250px' mb={[5, 5, 5]}>
-            <Image src={Secretary} w='100%' objectFit='cover' />
-            <Box position='absolute' top='160px' left='-80px'>
-              <Image src={Rec} w='300px' h='220px' />
-            </Box>
-            <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
-              <Heading fontWeight='medium' fontSize='20px' color='#E05D2F' mb='1'>Secretary</Heading>
-              <Text color='#1E3747' fontSize='15px' fontWeight='medium'>Okafor Nathaniel</Text>
-            </Box>
-          </Box>
+          <OrganizerCard image={Lead} role='Lead' name='Adeleke Oshin' />
+          <OrganizerCard image={CoOrganiser} role='Co-Organizer' name='Peter James' />
+          <OrganizerCard image={Organiser} role='Organizer' name='Okoro John' />
+          <OrganizerCard image={Secretary} role='Secretary' name='Okafor Nathaniel' />
         </Flex>
 
         <Box
@@ -92,3 +53,19 @@ const Organisers = () => {
 };
 
 export default Organisers;
+
+
+export const OrganizerCard = ({role, name, image}) => {
+  return (
+    <Box position='relative' w='250px' h='250px' mb={[20, 5, 5]}>
+      <Image src={image} w='100%' objectFit='cover' />
+      <Box position='absolute' top='180px' left='-80px'>
+        <Image src={Rec} w='300px' h='170px' />
+      </Box>
+      <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
+        <Heading fontWeight='medium' fontSize='18px' color='#E05D2F'>{role}</Heading>
+        <Text color='#1E3747' fontSize='14px' fontWeight='medium'>{name}</Text>
+      </Box>
+    </Box>
+  )
+}
