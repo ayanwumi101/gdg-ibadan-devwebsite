@@ -24,7 +24,6 @@ const Organisers = () => {
           fontWeight="500"
           pt={{ base: "61px", lg: "93px" }}
           mb='20'
-        //   fontFamily="Recoleta, sans-serif"
         >
           Let’s Meet the Organisers
         </Heading>
@@ -63,7 +62,7 @@ export const OrganizerCard = ({role, name, image}) => {
         <Image src={Rec} w='300px' h='170px' />
       </Box>
       <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
-        <Heading fontWeight='medium' fontSize='18px' color='#E05D2F'>{role}</Heading>
+        <Heading fontWeight='medium' fontSize='17px' color='#E05D2F'>{role}</Heading>
         <Text color='#1E3747' fontSize='14px' fontWeight='medium'>{name}</Text>
       </Box>
     </Box>

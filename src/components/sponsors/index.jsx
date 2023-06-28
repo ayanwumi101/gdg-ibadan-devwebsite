@@ -32,15 +32,15 @@ const Sponsors = () => {
   }, []);
 
   return (
-    <Box mb='12' w={['80%', '70%']} mx='auto' overflow='hidden' ref={containerRef}>
-      {/* <Center
+    <Box mb='12' w={['100%','80%', '70%']} mx='auto' overflow='hidden' ref={containerRef}>
+      <Center
         fontSize={{ base: "32px", lg: "45px" }}
         fontWeight="500"
         lineHeight={{ base: "40px", lg: "57px" }}
         color='#1E3747'
       >
         Our Sponsors
-      </Center> */}
+      </Center>
       <Flex
         ref={scrollRef}
         alignItems="center"

@@ -141,7 +141,7 @@ const Home = () => {
             // pt="20px"
             color="#6A7C88"
             fontSize="20px"
-            fontWeight="medium"
+            fontWeight="normal"
             lineHeight="35px"
             mb='7'
             // width={{ base: "302px", lg: "367px" }}
