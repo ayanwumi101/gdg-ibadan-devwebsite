@@ -1,5 +1,5 @@
 "use client";
-import { Box, Flex, Heading, Image, Button } from "@chakra-ui/react";
+import { Box, Flex, Heading, Image, Button, Text } from "@chakra-ui/react";
 // import React from "react";
 import Lead from "../../assets/lead-img.png";
 import CoOrganiser from "../../assets/co-organiser.png";
@@ -7,7 +7,7 @@ import Organiser from "../../assets/orgaiser.png";
 import Secretary from "../../assets/secretary.png";
 import { Link } from "react-router-dom";
 // import Buttons from "../buttons";
-// import Rectangle from "../../assets/Rectangle 9789.png"
+import Rec from "../../assets/Rectangle 9789.png"
 
 const Organisers = () => {
   return (
@@ -23,185 +23,68 @@ const Organisers = () => {
           lineHeight={{ base: "40px", lg: "57px" }}
           fontWeight="500"
           pt={{ base: "61px", lg: "93px" }}
+          mb='20'
         //   fontFamily="Recoleta, sans-serif"
         >
           Let’s Meet the Organisers
         </Heading>
         <Flex
-          justifyContent="center"
-          columnGap="40px"
-          pl={{ base: "68px", lg: "180px" }}
-          pr={{ base: "67px", lg: "181px" }}
-          pt={{ base: "28px", lg: "65px" }}
-          display={{ base: "block", lg: "flex" }}
-          alignItems="baseline"
+          w='85%'
+          mx='auto'
+          justifyContent={['center', 'space-between', 'space-between']}
+          mb='10'
+          flexWrap='wrap'
         >
-          <Box position="relative">
-            <Box position="relative" right="7px" top="0rem">
-              <Image src={Lead} alt={""} />
+          <Box position='relative' w='250px' h='250px' mb={[20, 5,5]}>
+            <Image src={Lead} w='100%' objectFit='cover' />
+            <Box position='absolute' top='160px' left='-80px'>
+              <Image src={Rec} w='300px' h='220px' />
             </Box>
-
-            <Box position="absolute" bottom={{ base: "-12rem", lg: "-9rem" }}>
-              <Image
-                src={Rec}
-                alt={""}
-                style={{
-                  position: "relative",
-                  top: "-7.3rem",
-                  right: "4.2rem",
-                }}
-              />
-            </Box>
-            <Box
-              position="relative"
-              bottom={{ base: "15px", lg: "34px" }}
-              right={{ base: "98px", lg: "70px" }}
-            >
-              <Heading
-                color="#E05D2F"
-                fontSize="16px"
-                lineHeight="24px"
-                fontWeight="500"
-              >
-                Lead
-              </Heading>
-              <Box
-                as="p"
-                fontSize="14px"
-                lineHeight="20px"
-                fontWeight="400"
-                color="#1E3747"
-              >
-                Adeleke Oshin
-              </Box>
+            <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
+              <Heading fontWeight='medium' fontSize='20px' color='#E05D2F' mb='1'>Lead</Heading>
+              <Text color='#1E3747' fontSize='15px' fontWeight='medium'>Adeleke Oshin</Text>
             </Box>
           </Box>
 
-          <Box pt="14px" position="relative">
-            <Box position="relative" right="7px" top="0rem">
-              <Image src={CoOrganiser} alt={""} />
+          <Box position='relative' w='250px' h='250px' mb={[20, 5, 5]}>
+            <Image src={CoOrganiser} w='100%' objectFit='cover' />
+            <Box position='absolute' top='160px' left='-80px'>
+              <Image src={Rec} w='300px' h='220px' />
             </Box>
-            <Box position="absolute" bottom={{ base: "-12rem", lg: "-9rem" }}>
-              <Image
-                src={Rec}
-                alt={""}
-                style={{
-                  position: "relative",
-                  top: "-7.3rem",
-                  right: "4.2rem",
-                }}
-              />
-            </Box>
-            <Box
-              position="relative"
-              bottom={{ base: "15px", lg: "34px" }}
-              right={{ base: "85px", lg: "70px" }}
-            >
-              <Heading
-                color="#E05D2F"
-                fontSize="16px"
-                lineHeight="24px"
-                fontWeight="500"
-              >
-                Co-Organiser
-              </Heading>
-              <Box
-                as="p"
-                fontSize="14px"
-                lineHeight="20px"
-                fontWeight="400"
-                color="#1E3747"
-              >
-                Peters James
-              </Box>
+            <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
+              <Heading fontWeight='medium' fontSize='20px' color='#E05D2F' mb='1'>Co-Organizer</Heading>
+              <Text color='#1E3747' fontSize='15px' fontWeight='medium'>Peter James</Text>
             </Box>
           </Box>
 
-          <Box pt="14px" position="relative">
-            <Box position="relative" right="7px" top="0rem">
-              <Image src={Organiser} alt={""} />
+          <Box position='relative' w='250px' h='250px' mb={[20, 5, 5]}>
+            <Image src={Organiser} w='100%' objectFit='cover' />
+            <Box position='absolute' top='160px' left='-80px'>
+              <Image src={Rec} w='300px' h='220px' />
             </Box>
-            <Box position="absolute" bottom={{ base: "-12rem", lg: "-9rem" }}>
-              <Image
-                src={Rec}
-                alt={""}
-                style={{
-                  position: "relative",
-                  top: "-7.3rem",
-                  right: "4.2rem",
-                }}
-              />
-            </Box>
-            <Box
-              position="relative"
-              bottom={{ base: "15px", lg: "34px" }}
-              right={{ base: "85px", lg: "70px" }}
-            >
-              <Heading
-                color="#E05D2F"
-                fontSize="16px"
-                lineHeight="24px"
-                fontWeight="500"
-              >
-                Organiser
-              </Heading>
-              <Box
-                as="p"
-                fontSize="14px"
-                lineHeight="20px"
-                fontWeight="400"
-                color="#1E3747"
-              >
-                Okoro John
-              </Box>
+            <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
+              <Heading fontWeight='medium' fontSize='20px' color='#E05D2F' mb='1'>Organizer</Heading>
+              <Text color='#1E3747' fontSize='15px' fontWeight='medium'>Okoro John</Text>
             </Box>
           </Box>
 
-          <Box pt="14px" position="relative">
-            <Box position="relative" right="7px" top="0rem">
-              <Image src={Secretary} alt={""} />
+          <Box position='relative' w='250px' h='250px' mb={[5, 5, 5]}>
+            <Image src={Secretary} w='100%' objectFit='cover' />
+            <Box position='absolute' top='160px' left='-80px'>
+              <Image src={Rec} w='300px' h='220px' />
             </Box>
-            <Box position="absolute" bottom={{ base: "-12rem", lg: "-9rem" }}>
-              <Image
-                src={Rec}
-                alt={""}
-                style={{
-                  position: "relative",
-                  top: "-7.3rem",
-                  right: "4.2rem",
-                }}
-              />
-            </Box>
-            <Box
-              position="relative"
-              bottom={{ base: "15px", lg: "34px" }}
-              right={{ base: "85px", lg: "70px" }}
-            >
-              <Heading
-                color="#E05D2F"
-                fontSize="16px"
-                lineHeight="24px"
-                fontWeight="500"
-              >
-                Secretary
-              </Heading>
-              <Box
-                as="p"
-                fontSize="14px"
-                lineHeight="20px"
-                fontWeight="400"
-                color="#1E3747"
-              >
-                Okafor Nathaniel
-              </Box>
+            <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
+              <Heading fontWeight='medium' fontSize='20px' color='#E05D2F' mb='1'>Secretary</Heading>
+              <Text color='#1E3747' fontSize='15px' fontWeight='medium'>Okafor Nathaniel</Text>
             </Box>
           </Box>
         </Flex>
+
         <Box
           paddingTop={{ base: "60px", lg: "55px" }}
           paddingBottom={{ base: "29px", lg: "76px" }}
         >
-          <Link to='/contact'><Button bg='#E05D2F' w='150px' h='45px' color='white' boxShadow='md'>Contact Us</Button></Link>
+          <Link to='/contact'><Button bg='#E05D2F' w='150px' h='50px' color='white' boxShadow='md'>Contact Us</Button></Link>
         </Box>
       </Box>
     </>

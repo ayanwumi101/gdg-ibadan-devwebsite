@@ -12,12 +12,6 @@ import axios from 'axios'
 
 const Contact = () => {
     const toast = useToast();
-    // const [state, handleSubmit] = useForm("mgebgnwk");
-    // const [firstname, setFirstname] = useState('')
-    // const [lastname, setLastname] = useState('')
-    // const [email, setEmail] = useState('')
-    // const [message, setMessage] = useState('')
-    // const [loading , setLoading] = useState(false);
     const [formData, setFormData] = useState({
         firstname: "",
         lastname: "",
@@ -28,13 +22,9 @@ const Contact = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        // setSubmitting(true);
-
         let { message, firstname, lastname, email } = formData;
-
         if (message && firstname && lastname && email) {
             setSubmitting(true);
-            // await handleSubmit();
             try {
                 // axios post to the url
                 let req = await axios({

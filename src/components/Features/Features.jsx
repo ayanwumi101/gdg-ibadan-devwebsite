@@ -20,6 +20,7 @@ const Features = () => {
           }
           background="#4285F4"
           color="#fff"
+          hoverBg='#E3F2FD'
         />
         <Cards
           hText={"Connect"}
@@ -28,6 +29,7 @@ const Features = () => {
           }
           background="#34A853"
           color="#fff"
+          hoverBg='#E8F5E9'
         />
         <Cards
           hText={"Events"}
@@ -36,6 +38,8 @@ const Features = () => {
           }
           background="#DA5847"
           color="#fff"
+          hoverBg='#FFEBEE'
+          
         />
         <Cards
           hText={"Discussion Forum"}
@@ -44,6 +48,7 @@ const Features = () => {
           }
           background="#FBBC04"
           color="#fff"
+          hoverBg='#FFF8E1'
         />
       </Stack>
     </Box>

@@ -113,16 +113,15 @@ const Home = () => {
         mt='8rem'
       >
         <Box
-          w={{ base: "100%", lg: "45%" }}
+          w={{ base: "100%", lg: "50%" }}
           mb='8'
         >
           <Heading
             color="#1E3747"
             fontWeight="500"
-            fontSize={{ base: "32px", lg: "45px" }}
+            fontSize={{ base: "32px", lg: "47px" }}
             lineHeight={{ base: "40px", lg: "57px" }}
             pb="38px"
-          // fontFamily="Recoleta, sans-serif"
           >
             About Us
           </Heading>
@@ -132,19 +131,21 @@ const Home = () => {
             lineHeight="20px"
             columnGap="37px"
             display="flex"
+            mb='5'
           >
             <ListItem color="#0F9D58">Connect</ListItem>
             <ListItem color="#4285F4">Learn</ListItem>
             <ListItem color="#EA4335">Grow</ListItem>
           </UnorderedList>
           <Text
-            pt="20px"
+            // pt="20px"
             color="#6A7C88"
-            fontSize="18px"
-            fontWeight="400"
-            lineHeight="32px"
-            mb='5'
-            width={{ base: "302px", lg: "367px" }}
+            fontSize="20px"
+            fontWeight="medium"
+            lineHeight="35px"
+            mb='7'
+            // width={{ base: "302px", lg: "367px" }}
+            w={['100%', '80%']}
             as="p"
           // fontFamily="Google Sans Display, sans-serif"
           >
@@ -158,7 +159,7 @@ const Home = () => {
           w={{ base: "100%", lg: "50%" }}
           mb='10'
         >
-          <Image src={About} w='100%' alt="" />
+          <Image src={About} w='100%' h='100%' alt="" objectFit='cover' />
         </Box>
       </Flex>
 
