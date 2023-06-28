@@ -19,9 +19,10 @@ import Group from "../../assets/groups.png";
 import Buttons from "../../components/buttons";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import { BeatLoader } from "react-spinners";
-
+import {data} from '../../components/data/data'
 
 const Event = () => {
+  
   return (
     <>
       <Box
@@ -103,21 +104,7 @@ const Event = () => {
         flexWrap='wrap'
         alignItems='center'
       >
-        <EventCard />
-        <EventCard />
-        <EventCard />
-      </Flex>
-
-      <Flex
-        w='80%'
-        mx='auto'
-        justifyContent={{ base: 'center', lg: 'space-between' }}
-        flexWrap='wrap'
-        alignItems='center'
-      >
-        <EventCard />
-        <EventCard />
-        <EventCard />
+        {data.map((event, index) => <EventCard key={event.id} id={event.id} />)}
       </Flex>
       <Box
         textAlign="center"

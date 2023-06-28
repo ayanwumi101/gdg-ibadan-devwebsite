@@ -13,9 +13,8 @@ import Blog from './pages/blog'
 import ErrorPage from './pages/404'
 import Jobs from './pages/Jobs'
 import ScrollToTop from './pages/ScrollToTop'
-import DareEvent from './pages/dareevent/page'
 import Contact from './pages/Contact/Contact'
-
+import SingleEvent from './pages/SingleEvent/SingleEvent'
 
 function App() {
   return (
@@ -31,8 +30,8 @@ function App() {
           <Route exact path='/verification' element={<EmailVerification />} />
           <Route exact path='/blog' element={<Blog />} />
           <Route path='/events' element={<Event />} />
+          <Route path='/eventdetails' element={<SingleEvent />} />
           <Route exact path='/jobs' element={<Jobs />} />
-          <Route exact path='/dareevent' element={<DareEvent />} />
           <Route exact path='/contact' element={<Contact />} />
           <Route exact path='*' element={<ErrorPage />} />
         </Routes>

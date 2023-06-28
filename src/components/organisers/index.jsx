@@ -16,6 +16,7 @@ const Organisers = () => {
         bgColor="#E9ECED"
         mt={{ base: "52px", lg: "104px" }}
         textAlign="center"
+        pb='10'
       >
         <Heading
           textAlign="center"
@@ -31,13 +32,22 @@ const Organisers = () => {
           w='85%'
           mx='auto'
           justifyContent={['center', 'space-between', 'space-between']}
-          mb='10'
           flexWrap='wrap'
         >
           <OrganizerCard image={Lead} role='Lead' name='Adeleke Oshin' />
           <OrganizerCard image={CoOrganiser} role='Co-Organizer' name='Peter James' />
           <OrganizerCard image={Organiser} role='Organizer' name='Okoro John' />
-          <OrganizerCard image={Secretary} role='Secretary' name='Okafor Nathaniel' />
+          {/* <OrganizerCard image={Secretary} role='Secretary' name='Okafor Nathaniel' /> */}
+          <Box position='relative' w='250px' h='250px' mb={[8, 5, 5]}>
+            <Image src={Secretary} w='100%' objectFit='cover' />
+            <Box position='absolute' top='180px' left='-80px'>
+              <Image src={Rec} w='300px' h='170px' />
+            </Box>
+            <Box position='absolute' zIndex='1' bottom='-20px' textAlign='left'>
+              <Heading fontWeight='medium' fontSize='17px' color='#E05D2F'>Secretary</Heading>
+              <Text color='#1E3747' fontSize='14px' fontWeight='medium'>Okafor Nathaniel</Text>
+            </Box>
+          </Box>
         </Flex>
 
         <Box

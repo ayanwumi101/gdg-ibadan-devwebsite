@@ -15,9 +15,9 @@ import Buttons from "../buttons";
 import Event from "../../assets/event.png";
 import loveIcon from "../../assets/loveIcon.svg";
 import downloadIcon from "../../assets/downloadIcon.svg";
-// import { DownloadIcon, LoveIcon } from "../icons";
+import { Link } from "react-router-dom";
 
-const EventCard = () => {
+const EventCard = ({id}) => {
   return (
     <>
       <Card
@@ -25,7 +25,7 @@ const EventCard = () => {
         mb='8'
         boxShadow="lg"
         w='315px'
-        h='400px'
+        h='400px'id={id}
       >
         <Image
           src={Event}
@@ -60,7 +60,9 @@ const EventCard = () => {
           <Text fontSize="14px" lineHeight="20px" fontWeight="400" color='#1E3747'>
             March 1-April 31 | Virtual and in-person
           </Text>
-          <Button bg='#E05D2F' w='100px' h={{ base: '35px', lg: '40px' }} fontWeight='medium' fontSize={14} color='white' boxShadow='md'>Register</Button>
+          <Link to={`/events/${id}`}>
+            <Button bg='#E05D2F' w='100px' h={{ base: '35px', lg: '40px' }} fontWeight='medium' fontSize={14} color='white' boxShadow='md'>Register</Button>
+          </Link>
         </Stack>
       </Card>
     </>
