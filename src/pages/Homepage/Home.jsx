@@ -12,17 +12,8 @@ import Header from "../../assets/gdg-header.jpg";
 import carousel1 from "../../assets/carousel-image2.jpg";
 import carousel2 from "../../assets/carousel-image3.jpg";
 import carousel3 from "../../assets/carousel-image4.jpg";
-import Buttons from "../../components/buttons";
 import About from "../../assets/images asset.png";
-import Lacasera from "../../assets/lacasera.png";
-import Cardify from "../../assets/cardify.png";
-import Ship from "../../assets/ship.png";
-import Altschool from "../../assets/Altschool.png";
-import Heyfood from "../../assets/heyfood.png";
-import Halal from "../../assets/halal.png";
-import Line from "../../assets/Line.png";
 import Organisers from "../../components/organisers";
-import HCardify from "../../assets/image 3.png";
 import Sponsors from "../../components/sponsors";
 import { Swiper, SwiperSlide } from 'swiper/react'
 import "swiper/css";
@@ -30,17 +21,8 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { Link } from "react-router-dom";
-import { keyframes } from '@emotion/react';
 import Features from "../../components/Features/Features";
 
-const slideAnimation = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-303vw);
-  }
-`;
 
 const Home = () => {
   return (
@@ -86,15 +68,11 @@ const Home = () => {
             <Text
               fontSize={{ base: "32px", lg: "42px" }}
               fontWeight="medium"
-              lineHeight={{ base: "60px", lg: "86px" }}
+              lineHeight={{ base: "45px", lg: "86px" }}
               color="#fff"
               mb='7'
             >
-              Welcome to{" "}
-              <Text as="span" color="#E05D2F">
-                GDG Ibadan
-              </Text>{" "}
-              website, where tech enthusiasts gather to share ideas and knowledge.
+              Welcome to <span style={{ color: "#E05D2F" }}> GDG Ibadan </span> website, where tech enthusiasts gather to share ideas and knowledge.
             </Text>
 
             <Button bg='#E05D2F' w='210px' h={{ base: '50px', lg: '55px' }} color='white' boxShadow='md'>

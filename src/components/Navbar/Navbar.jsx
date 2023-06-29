@@ -42,7 +42,7 @@ const Navbar = () => {
         <Flex alignItems="center" justifyContent="space-between">
           <Box>
             <Link to='/'>
-            <Image src={logo} />
+              <Image src={logo} w='85%' />
             </Link>
           </Box>
 
