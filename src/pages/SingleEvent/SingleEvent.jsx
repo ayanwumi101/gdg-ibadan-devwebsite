@@ -195,8 +195,8 @@ export const EventSchedule = () => {
         </Box>
 
         <Box display='flex' alignItems='center' gap={2}>
-          <Text color='white' bg='#E05D2F' w='170px' textAlign='center' p='2'>Wed , 12 July 2023</Text>
-          <Text>Thur , 12 July 2023</Text>
+          <Text color='white' bg='#E05D2F' w='170px' textAlign='center' p='2' fontSize={14}>Wed , 12 July 2023</Text>
+          <Text fontSize={14}>Thur , 12 July 2023</Text>
         </Box>
         <Box>
           <Box p='4' bg='#E3F2FD' h={['auto', '310px', '310px']} display='flex' alignItems='center' justifyContent='center' w='100%'>

@@ -9,8 +9,9 @@ import {
   UnorderedList, Image, Button
 } from "@chakra-ui/react";
 import Header from "../../assets/gdg-header.jpg";
-import carousel1 from "../../assets/carousel-image2.png";
-import carousel2 from "../../assets/carousel-image3.png";
+import carousel1 from "../../assets/carousel-image2.jpg";
+import carousel2 from "../../assets/carousel-image3.jpg";
+import carousel3 from "../../assets/carousel-image4.jpg";
 import Buttons from "../../components/buttons";
 import About from "../../assets/images asset.png";
 import Lacasera from "../../assets/lacasera.png";
@@ -51,7 +52,7 @@ const Home = () => {
         position="relative"
         mx='auto'
       >
-        <Box height={{ base: "732px", lg: "100vh" }}>
+        <Box height={{ base: "600px", lg: "85vh" }}>
           <Swiper spaceBetween={30} centeredSlides={true}
             autoplay={{
               delay: 2500,
@@ -62,8 +63,9 @@ const Home = () => {
             style={{ height: '100%', objectFit: 'cover', borderRadius: '24px' }}
           >
             <SwiperSlide><Image src={Header} alt="" borderRadius='24px' objectFit='cover' h='100%' w='100%' /></SwiperSlide>
-            <SwiperSlide><Image src={carousel1} alt="" style={{ borderRadius: "24px", objectFit: "cover", height: "100%" }} /></SwiperSlide>
-            <SwiperSlide><Image src={carousel2} alt="" style={{ borderRadius: "24px", objectFit: "cover", height: "100%" }} /></SwiperSlide>
+            <SwiperSlide><Image src={carousel1} alt="" borderRadius='24px' objectFit='cover' h='100%' w='100%' /></SwiperSlide>
+            <SwiperSlide><Image src={carousel2} alt="" borderRadius='24px' objectFit='cover' h='100%' w='100%' /></SwiperSlide>
+            <SwiperSlide><Image src={carousel3} alt="" borderRadius='24px' objectFit='cover' h='100%' w='100%' /></SwiperSlide>
           </Swiper>
         </Box>
 
@@ -72,35 +74,35 @@ const Home = () => {
           zIndex='1'
           top="0rem"
           textAlign="center"
-          background="rgba(0, 0, 0, 0.5)"
+          background="rgba(0, 0, 0, 0.7)"
           width="100%"
-          pb={{ base: "0rem", lg: "14.5rem" }}
-          pt={{ base: "0rem", lg: "6rem" }}
           borderRadius="24px"
           height={{ base: "100%" }}
+          display='flex'
+          alignItems='center'
+          justifyContent='center'
         >
-          <Text
-            pt={{ base: "95px", lg: "94px" }}
-            pl={{ base: "49px", lg: "163px" }}
-            fontSize={{ base: "32px", lg: "42px" }}
-            pr={{ base: "42px", lg: "164px" }}
-            fontWeight="medium"
-            lineHeight={{ base: "60px", lg: "86px" }}
-            color="#fff"
-            paddingBottom={{ base: "56px" }}
-          >
-            Welcome to{" "}
-            <Text as="span" color="#E05D2F">
-              GDG Ibadan
-            </Text>{" "}
-            website, where tech enthusiasts gather to share ideas and knowledge.
-          </Text>
+          <Box maxW='800px'>
+            <Text
+              fontSize={{ base: "32px", lg: "42px" }}
+              fontWeight="medium"
+              lineHeight={{ base: "60px", lg: "86px" }}
+              color="#fff"
+              mb='7'
+            >
+              Welcome to{" "}
+              <Text as="span" color="#E05D2F">
+                GDG Ibadan
+              </Text>{" "}
+              website, where tech enthusiasts gather to share ideas and knowledge.
+            </Text>
 
-          <Button bg='#E05D2F' w='210px' h={{ base: '45px', lg: '47px' }} color='white' boxShadow='md'>
-            <a href='https://gdg.community.dev/gdg-ibadan/' target='_blank'>
-              Join Our Community
-            </a>
-          </Button>
+            <Button bg='#E05D2F' w='210px' h={{ base: '50px', lg: '55px' }} color='white' boxShadow='md'>
+              <a href='https://gdg.community.dev/gdg-ibadan/' target='_blank'>
+                Join Our Community
+              </a>
+            </Button>
+          </Box>
         </Box>
       </Box>
 

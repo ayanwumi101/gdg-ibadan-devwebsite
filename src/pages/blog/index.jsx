@@ -15,7 +15,6 @@ import {
   Card, Image, Badge
 } from "@chakra-ui/react";
 import BlogImage from "../../assets/about (4).png";
-import MobileImage from "../../assets/about (5).png";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
