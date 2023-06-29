@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { Box, Heading } from '@chakra-ui/react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Homepage/Home'
@@ -15,8 +15,42 @@ import Jobs from './pages/Jobs'
 import ScrollToTop from './pages/ScrollToTop'
 import Contact from './pages/Contact/Contact'
 import SingleEvent from './pages/SingleEvent/SingleEvent'
+import Loader from './components/Loader/Loader'
 
 function App() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const images = document.querySelectorAll('img');
+    let loadedCount = 0;
+
+    const handleImageLoad = () => {
+      loadedCount++;
+      if (loadedCount === images.length) {
+        setIsLoading(false);
+      }
+    };
+
+    images.forEach((image) => {
+      if (image.complete) {
+        handleImageLoad();
+      } else {
+        image.addEventListener('load', handleImageLoad);
+      }
+    });
+
+    return () => {
+      images.forEach((image) => {
+        image.removeEventListener('load', handleImageLoad);
+      });
+    };
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+  
   return (
     <Box w='100%' mx='auto'>
       <Router>
