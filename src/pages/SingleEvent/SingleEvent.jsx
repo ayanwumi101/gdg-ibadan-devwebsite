@@ -132,7 +132,7 @@ export const EventDetails = () => {
   return (
     <>
       <Box
-        w='85%'
+        w={['90%', '85%']}
         mx='auto'
       >
       <Flex w='100%' justifyContent={['center', 'space-between']} flexWrap='wrap-reverse'>
@@ -186,7 +186,7 @@ export const EventDetails = () => {
 export const EventSchedule = () => {
   return (
     <>
-      <Box w='85%' mx='auto' mb='10'>
+      <Box w={['90%', '85%']} mx='auto' mb='10'>
         <Box mb='7'>
           <Flex justifyContent='space-between' alignItems='center' flexWrap='wrap'>
             <Heading fontSize='32px' fontWeight='medium' mb='5'>Event Schedule</Heading>
