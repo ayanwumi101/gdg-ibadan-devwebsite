@@ -52,7 +52,7 @@ const Home = () => {
         position="relative"
         mx='auto'
       >
-        <Box height={{ base: "600px", lg: "85vh" }}>
+        <Box height={{ base: "650px", lg: "85vh" }}>
           <Swiper spaceBetween={30} centeredSlides={true}
             autoplay={{
               delay: 2500,
@@ -74,7 +74,7 @@ const Home = () => {
           zIndex='1'
           top="0rem"
           textAlign="center"
-          background="rgba(0, 0, 0, 0.7)"
+          background="rgba(0, 0, 0, 0.5)"
           width="100%"
           borderRadius="24px"
           height={{ base: "100%" }}
@@ -82,7 +82,7 @@ const Home = () => {
           alignItems='center'
           justifyContent='center'
         >
-          <Box maxW='800px'>
+          <Box maxW='800px' px={[7, 5, 0]}>
             <Text
               fontSize={{ base: "32px", lg: "42px" }}
               fontWeight="medium"
