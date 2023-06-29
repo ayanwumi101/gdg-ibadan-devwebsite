@@ -27,16 +27,17 @@ import Dyson from "../../assets/Rectangle 364.png";
 import Organisers from "../../components/organisers";
 import { useParams } from "react-router-dom";
 import {data} from '../../components/data/data'
+import Presenter from '../../assets/presenter.png'
 
 const SingleEvent = () => {
 
-  // const {id} = useParams()
-  // const [event, setEvent] = useState(data);
+  const {id} = useParams()
+  const [event, setEvent] = useState(data);
 
-  // useEffect(() => {
-  //   const specificEvent = event.find((event) => event.id === parseInt(id));
-  //   setEvent(specificEvent)
-  // },[])
+  useEffect(() => {
+    const specificEvent = event.find((event) => event.id === parseInt(id));
+    setEvent(specificEvent)
+  },[])
 
   return (
     <Box mx='auto'>
@@ -83,6 +84,7 @@ export const EventHeaderImage = () => {
         display='flex'
         alignItems='center'
         justifyContent='center'
+        p='4'
       >
 
         {/* <Box
@@ -163,8 +165,9 @@ export const EventDetails = () => {
 
 
         <Box w={['100%', '30%', '30%']} textAlign='center'>
+          <Box bg='#E8F5E9' mb='3' p='2' borderRadius='24px'><Text color='#34A853'>Ticket closing soon</Text></Box>
           <Box position='relative' >
-              <Box position='absolute' w='345px' top='0' bg='white' inset='0' mx='auto' h='180px' boxShadow='xl' borderRadius={5} zIndex='2' py='10'>
+              <Box position='absolute' w='345px' top='0' bg='white' inset='0' mx='auto' h='180px' boxShadow='xl' borderRadius={5} zIndex='1' py='10'>
                 <Text mb='7' color='#1E3747' fontWeight='medium' fontSize={18}>It's free for everyone</Text>
                 <Button bg='#E05D2F' color='white'>Register Now</Button>
               </Box>
@@ -183,6 +186,82 @@ export const EventDetails = () => {
 export const EventSchedule = () => {
   return (
     <>
+      <Box w='85%' mx='auto' mb='10'>
+        <Box mb='7'>
+          <Flex justifyContent='space-between' alignItems='center' flexWrap='wrap'>
+            <Heading fontSize='32px' fontWeight='medium' mb='5'>Event Schedule</Heading>
+            <Button bg='#E05D2F' color='white' fontWeight='medium' h='50px'>Add to Calendar</Button>
+          </Flex>
+        </Box>
+
+        <Box display='flex' alignItems='center' gap={2}>
+          <Text color='white' bg='#E05D2F' w='170px' textAlign='center' p='2'>Wed , 12 July 2023</Text>
+          <Text>Thur , 12 July 2023</Text>
+        </Box>
+        <Box>
+          <Box p='4' bg='#E3F2FD' h={['auto', '310px', '310px']} display='flex' alignItems='center' justifyContent='center' w='100%'>
+            <Box w='100%'>
+              <Stack direction={['column', 'row', 'row']} justifyContent='space-between' alignItems={['flex-start', 'center']}>
+                <Box mb='5'>
+                  <Text>8:00AM - 9:00AM</Text>
+                </Box>
+
+                <Box w='275px'>
+                  <Heading fontSize={15} mb='4'>Welcome Address</Heading>
+                  <Text mb='5'>Adeyinka AdeyemiManaging Director/CEO,Intermarc Consulting, Nigeria</Text>
+                  <Text mb='5'>Adeyinka AdeyemiManaging Director/CEO,Intermarc Consulting, Nigeria</Text>
+                </Box>
+
+                <Box maxW='385px' h='265px'>
+                  <Image src={Presenter} w='100%' objectFit='cover' borderRadius='24px' />
+                </Box>
+              </Stack>
+            </Box>
+          </Box>
+
+          <Box p='4' bg='#FFEBEE' h={['auto', '310px', '310px']} display='flex' alignItems='center' justifyContent='center' w='100%'>
+            <Box w='100%'>
+              <Stack direction={['column', 'row', 'row']} justifyContent='space-between' alignItems={['flex-start', 'center']}>
+                <Box mb='5'>
+                  <Text>8:00AM - 9:00AM</Text>
+                </Box>
+
+                <Box w='275px'>
+                  <Heading fontSize={15} mb='4'>Opening Speech</Heading>
+                  <Text mb='5'>Adeyinka AdeyemiManaging Director/CEO,Intermarc Consulting, Nigeria</Text>
+                  <Text mb='5'>Adeyinka AdeyemiManaging Director/CEO,Intermarc Consulting, Nigeria</Text>
+                </Box>
+
+                <Box maxW='385px' h='265px'>
+                  <Image src={Presenter} w='100%' objectFit='cover' borderRadius='24px' />
+                </Box>
+              </Stack>
+            </Box>
+          </Box>
+
+          <Box p='4' bg='#FFF8E1' h={['auto', '310px', '310px']} display='flex' alignItems='center' justifyContent='center' w='100%'>
+            <Box w='100%'>
+              <Stack direction={['column', 'row', 'row']} justifyContent='space-between' alignItems={['flex-start', 'center']}>
+                <Box mb='5'>
+                  <Text>8:00AM - 9:00AM</Text>
+                </Box>
+
+                <Box w='275px'>
+                  <Heading fontSize={15} mb='4'>Opening Speech</Heading>
+                  <Text mb='5'>Adeyinka AdeyemiManaging Director/CEO,Intermarc Consulting, Nigeria</Text>
+                  <Text mb='5'>Adeyinka AdeyemiManaging Director/CEO,Intermarc Consulting, Nigeria</Text>
+                </Box>
+
+                <Box maxW='385px' h='265px'>
+                  <Image src={Presenter} w='100%' objectFit='cover' borderRadius='24px' />
+                </Box>
+              </Stack>
+            </Box>
+          </Box>
+        </Box>
+
+
+      </Box>
     </>
   )
 }

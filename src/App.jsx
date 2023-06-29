@@ -30,7 +30,7 @@ function App() {
           <Route exact path='/verification' element={<EmailVerification />} />
           <Route exact path='/blog' element={<Blog />} />
           <Route path='/events' element={<Event />} />
-          <Route path='/eventdetails' element={<SingleEvent />} />
+          <Route path='/events/:id' element={<SingleEvent />} />
           <Route exact path='/jobs' element={<Jobs />} />
           <Route exact path='/contact' element={<Contact />} />
           <Route exact path='*' element={<ErrorPage />} />
