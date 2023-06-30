@@ -73,7 +73,7 @@ export const EventHeaderImage = () => {
             <Image src={Calendar} objectFit='cover' alt={""} w='100%' h={['320px', '500px']} />
 
             <Box w='200px' mb='5'>
-              <Text w={['auto', '180px']} mb='2' fontSize={18}>Share event with friends</Text>
+              <Text w={['auto', '180px']} mb='2' fontSize={[18, 16]}>Share event with friends</Text>
               <Stack fontSize={25} direction={['row', 'column']} spacing={5}>
                 <Box>
                   <Stack direction='column' spacing={2}>
