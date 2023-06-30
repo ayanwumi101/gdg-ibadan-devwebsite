@@ -6,28 +6,22 @@ import {
   Flex,
   Heading,
   Icon,
-  Text, Image, Stack
+  Text, Image, Stack, Grid, GridItem
 } from "@chakra-ui/react";
 import React, {useState, useEffect} from "react";
 import Line from "../../assets/Pattern 2.png";
 import Calendar from "../../assets/image 2.png";
-import Navbar from "../../components/Navbar/Navbar";
-import {
-  DangerIcon,
-  FacebookIcon,
-  LinkedinIcon,
-  TwitterIcon,
-  WhatsappIcon,
-} from "../../components/icons";
-import Buttons from "../../components/buttons";
 import Sponsors from "../../components/sponsors";
-import BMW from "../../assets/Rectangle 361.png";
-import TM from "../../assets/Rectangle 366.png";
-import Dyson from "../../assets/Rectangle 364.png";
 import Organisers from "../../components/organisers";
 import { useParams } from "react-router-dom";
 import {data} from '../../components/data/data'
 import Presenter from '../../assets/presenter.png'
+import GalleryImage from '../../assets/gallery-image.png'
+import GalleryImage2 from '../../assets/gallery-image2.png'
+import GalleryImage3 from '../../assets/gallery-image3.png'
+import twitter from '../../assets/twitter-bold-icon.svg'
+import linkedin from '../../assets/linkedin-logo.svg'
+import {Whatsapp, Facebook} from 'iconsax-react'
 
 const SingleEvent = () => {
 
@@ -47,19 +41,6 @@ const SingleEvent = () => {
       <PhotoCollage />
       <Sponsors />
       <Organisers />
-      {/* <Box
-          display={{ base: "flex", lg: "none" }}
-          pl="25px"
-          pr="34px"
-          pt="46px"
-          pb="136px"
-          alignItems="center"
-          justifyContent="space-between"
-        >
-          <Image src={BMW} alt={""} />
-          <Image src={TM} alt={""} />
-          <Image src={Dyson} alt={""} />
-        </Box> */}
     </Box>
   );
 };
@@ -75,7 +56,7 @@ export const EventHeaderImage = () => {
         color="#fff"
         mt='6'
         mb='12'
-        h='550px'
+        h={['700px', '550px']}
         w='90%'
         mx='auto'
         bgImage={Line}
@@ -87,41 +68,27 @@ export const EventHeaderImage = () => {
         p='4'
       >
 
-        {/* <Box
-          position="absolute"
-          top={{ base: "3rem", lg: "0.5rem" }}
-          right={{ base: "11rem", lg: "4rem" }}
-          cursor="pointer"
-        >
-          <Text pb={{ base: "23px", lg: "15px" }}>
-            Share event with friends
-          </Text>
-          <Box>
-            <Box
-              display={{ base: "flex", lg: "block" }}
-              columnGap="26px"
-              pb={{ base: "24px", lg: "0px" }}
-            >
-              <Box mb={{ base: "0px", lg: "25px" }}>
-                <Icon as={WhatsappIcon}></Icon>
-              </Box>
-              <Box mb={{ base: "0px", lg: "25px" }}>
-                <Icon as={FacebookIcon}></Icon>
-              </Box>
-            </Box>
-            <Box display={{ base: "flex", lg: "block" }} columnGap="26px">
-              <Box mb={{ base: "0px", lg: "25px" }}>
-                <Icon as={TwitterIcon}></Icon>
-              </Box>
-              <Box mb={{ base: "0px", lg: "25px" }}>
-                <Icon as={LinkedinIcon}></Icon>
-              </Box>
-            </Box>
-          </Box>
-        </Box> */}
-
         <Box>
-          <Image src={Calendar} objectFit='cover' alt={""} w='100%' h='500px' />
+          <Flex gap={3} flexWrap={['wrap-reverse', 'nowrap']}>
+            <Image src={Calendar} objectFit='cover' alt={""} w='100%' h={['320px', '500px']} />
+
+            <Box w='200px' mb='5'>
+              <Text w={['auto', '180px']} mb='2' fontSize={18}>Share event with friends</Text>
+              <Stack fontSize={25} direction={['row', 'column']} spacing={5}>
+                <Box>
+                  <Stack direction='column' spacing={2}>
+                    <Icon as={Whatsapp} variant='Bold'  />
+                    <Icon as={Facebook} variant='Bold' />
+                  </Stack>
+                </Box>
+                <Box>
+                   <Image src={twitter} w='25px' mb='2' />
+                    <Image src={linkedin} w='27px' />
+                </Box>
+              </Stack>
+            </Box>
+
+          </Flex>
         </Box>
       </Box>
   )
@@ -268,8 +235,37 @@ export const EventSchedule = () => {
 
 export const PhotoCollage = () => {
   return (
-    <>
-
-    </>
+      <Box w='85%' mx='auto' minH='985px' mb='20'>
+        <Box mb='8'><Heading color='#1E3747' fontSize={32} fontWeight='medium'>Photo collage</Heading></Box>
+        <Stack direction={['column', 'row']} justifyContent='space-between'>
+          <Box maxW='378px' h='100%'>
+            <Stack>
+              <Image src={GalleryImage} w='100%' h='212px' objectFit='cover' />
+              <Image src={GalleryImage2} w='100%' h='599px' objectFit='cover' />
+              <Image src={GalleryImage} w='100%' h='183px' objectFit='cover' />
+            </Stack>
+          </Box>
+          <Box maxW='798px' h='100%'>
+            <Stack direction='column' justifyContent='space-between'>
+                <Image src={GalleryImage3} w='100%' h='336px' objectFit='cover' />
+                <Stack direction='row' w='100%' h='100%'>
+                  <Box>
+                    <Stack direction='column' justifyContent='space-between'>
+                      <Image src={GalleryImage} w='100%' h='212px' objectFit='cover' />
+                      <Image src={GalleryImage2} w='100%' h='444px' objectFit='cover' />
+                    </Stack>
+                  </Box>
+                  <Box>
+                    <Stack direction='column' justifyContent='space-between'>
+                      <Image src={GalleryImage} w='100%' h='212px' objectFit='cover' />
+                      <Image src={GalleryImage} w='100%' h='216px' objectFit='cover' />
+                      <Image src={GalleryImage} w='100%' h='216px' objectFit='cover' />
+                    </Stack>
+                  </Box>
+                </Stack>
+            </Stack>
+          </Box>
+        </Stack>
+      </Box>
   )
 }

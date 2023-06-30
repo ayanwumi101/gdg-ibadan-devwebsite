@@ -68,7 +68,7 @@ const Home = () => {
             <Text
               fontSize={{ base: "32px", lg: "42px" }}
               fontWeight="medium"
-              lineHeight={{ base: "45px", lg: "86px" }}
+              lineHeight={{ base: "55px", lg: "86px" }}
               color="#fff"
               mb='7'
             >
