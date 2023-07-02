@@ -10,8 +10,12 @@ organizersRoutes.route('/event')
 
 organizersRoutes.get('/events/created', passport.authenticate('jwt'), organizersController.getCreatedEvents)
 
-organizersRoutes.post('/events/:id/createCheckIn', organizersController.createCheckIn)
+organizersRoutes.patch('/event/:id/edit', passport.authenticate('jwt'), organizersController.editEvent)
 
-organizersRoutes.post('/events/:eventID/scan/:scannerID', organizersController.scan)
+organizersRoutes.delete('/event/:id/delete', passport.authenticate('jwt'), organizersController.deleteEvent)
 
-export default organizersRoutes
+organizersRoutes.post('/event/:id/createCheckIn', organizersController.createCheckIn)
+
+organizersRoutes.post('/event/:eventID/scan/:scannerID', organizersController.scan)
+
+export default organizersRoutes;

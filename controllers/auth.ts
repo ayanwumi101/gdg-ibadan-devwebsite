@@ -45,10 +45,24 @@ export const signup: RequestHandler = async (req ,res) => {
             return;
         }
         return res.status(400).json({ data: { msg: 'Account already exists'} })
-    } catch (err) {
-        throw err;
+    } catch (err: any) {
+        res.status(500).json({ data: { msg: 'Server error', error: err.message } });
     }
 };
+
+export const verifyMail: RequestHandler = async (req, res) => {
+    try {
+        // const msg = {
+        //     to: user.email,
+        //     from: 'hoismail2017@gmail.com',
+        //     subject: 'Your OTP for login',
+        //     text: `Your OTP is: ${OTP}`,
+        // };
+        // sgMail.send(msg)
+    } catch (err: any) {
+        res.status(500).json({ data: { msg: 'Server error', error: err.message } });
+    }
+}
 
 export const signin = (req: Request, res: Response, next: NextFunction) => {
     try {
@@ -87,7 +101,7 @@ export const signin = (req: Request, res: Response, next: NextFunction) => {
             res.status(200).json({ msg: 'check your mail or phone for an OTP sent', token })
         })(req,res,next)
     } catch (err: any) {
-        res.status(500).json({ data: { msg: 'Server error', error: err.message, status: err.status } });
+        res.status(500).json({ data: { msg: 'Server error', error: err.message } });
     }
 };
 
@@ -145,7 +159,7 @@ export const verify = (req: Request, res: Response, next: NextFunction) => {
                 });
             })
             .catch(e => res.status(400).json({ message: e }))
-    } catch (err) {
-        throw err;
+    } catch (err: any) {
+        res.status(500).json({ data: { msg: 'Server error', error: err.message } });
     }
 }

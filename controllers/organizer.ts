@@ -145,6 +145,27 @@ export const getCreatedEvents: RequestHandler = async (req, res, next) => {
     }
 };
 
+export const editEvent: RequestHandler = async (req, res) => {
+    try {
+        const my_details: any = req.user;
+        if (my_details.userType === userType.user) {
+            return res.status(403).json({ data: { msg: 'Not authorized to access this' } })
+        }
+        const {id} = req.params;
+
+        const condition = { creatorID: my_details._id, _id: id };
+        let options = { lean: true, new: true }
+
+        const update = {...req.body}
+
+        const updated = Event.findOneAndUpdate(condition, update, options);
+        if(updated) return res.status(200).json({ data: { msg: 'Event updated', event: updated } });
+        return res.status(400).json({ data: { msg: 'Updated failed' } })
+    } catch (err: any) {
+        res.status(500).json({ data: { msg: 'Server error', error: err.message } });
+    }
+}
+
 export const createCheckIn: RequestHandler = async (req, res) => {
     try {
         // const my_details: any = req.user;
@@ -266,5 +287,23 @@ export const scan: RequestHandler = async (req, res) => {
         // event.dynamicField = tags;
     } catch (err: any) {
         res.status(500).json({ data: { msg: 'Server error', error: err.message, status: err.status } });
+    }
+};
+
+export const deleteEvent: RequestHandler = async (req, res) => {
+    try {
+        const my_details: any = req.user;
+        if (my_details.userType === userType.user) {
+            return res.status(403).json({ data: { msg: 'Not authorized to access this' } })
+        }
+        const {id} = req.params;
+
+        const condition = { creatorID: my_details._id, _id: id };
+
+        const deleted = await Event.findOneAndDelete(condition);
+        if(deleted) return res.status(200).json({ data: { msg: 'Event deleted' } });
+        return res.status(400).json({ data: { msg: 'Deletion failed' } });
+    } catch (err: any) {
+        res.status(500).json({ data: { msg: 'Server error', error: err.message } });
     }
 }
