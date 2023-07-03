@@ -3,13 +3,14 @@ import {
   Box,
   Flex,
   Heading,
-  Icon,
-  ListItem,
+  // Icon,
+  // ListItem,
   Text,
-  UnorderedList, Button, Image
+  // UnorderedList,
+   Button, Image
 } from "@chakra-ui/react";
-import React from "react";
-import Buttons from "../buttons";
+// import React from "react";
+// import Buttons from "../buttons";
 import Logo from "../logo";
 // import { LinkedinIcon, SlackIcon, TwitterIcon } from "../icons";
 import Slack from '../../assets/slack.svg'
@@ -17,8 +18,10 @@ import linkedin from '../../assets/linkedin-logo.svg'
 import instagram from '../../assets/instagram-icon.svg'
 import twitter from '../../assets/twitter-logo.svg'
 import { Link, useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Footer = () => {
+
   const location = useLocation();
   return (
     <>
@@ -80,7 +83,9 @@ const Footer = () => {
                   mr={{ base: "70px", lg: "90px" }}
                   ml={{ base: "17px", lg: "0px" }}
                 >
-                  <a href="https://gdg.community.dev/gdg-ibadan/" target='_blank'><Button bg='#E05D2F' w='210px' color='white' fontSize={15} h='55px'>Join our community</Button></a>
+                  {/* <a href="https://gdg.community.dev/gdg-ibadan/" target='_blank'> */}
+                    <Button bg='#E05D2F' w='210px' color='white' fontSize={15} h='55px'>Join our community</Button>
+                    {/* </a> */}
                 </Box>
               </Flex>
               <Box display={{ base: "none" }}>
@@ -151,46 +156,109 @@ const Footer = () => {
               </Box>
 
               <Box display={{ base: "block" }}>
+              <motion.div
+                initial={{ x: -100 }}
+                animate={{ y: 100 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  repeatType: "reverse",
+                }}
+              >
                 <Box
                   position="absolute"
-                  inset="2rem auto auto 2rem"
+                  inset="auto auto 20rem 8rem"
                   backgroundColor="#E05D2F"
                   borderRadius="15px"
                   width="9px"
                   height="9px"
                 ></Box>
+                </motion.div>
+                <motion.div
+                initial={{ x: -10 }}
+                animate={{ x: 10 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  repeatType: "reverse",
+                }}
+              >
+      <Box
+        backgroundColor="#34A853"
+        position="absolute"
+      inset="-15rem auto auto 8rem"
+        borderRadius="50%"
+        width="9px"
+        height="9px"
+      />
+    </motion.div>
+
+    <motion.div
+                initial={{ y: -100 }}
+                animate={{ x: 100 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  repeatType: "reverse",
+                }}
+              >
                 <Box
                   position="absolute"
-                  inset="2rem auto auto 13rem"
-                  backgroundColor="#34A853"
-                  borderRadius="15px"
-                  width="9px"
-                  height="9px"
-                ></Box>
-                <Box
-                  position="absolute"
-                  inset="8rem 10rem auto auto"
+                  inset="-15rem 8rem auto auto"
                   backgroundColor="#E05D2F"
                   borderRadius="15px"
                   width="8px"
                   height="8px"
                 ></Box>
+                </motion.div>
+
+                <motion.div
+                initial={{ x: -10 }}
+                animate={{ x: 10 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  repeatType: "reverse",
+                }}
+              >
                 <Box
                   position="absolute"
-                  inset="auto auto 4rem 10rem"
+                  inset="auto auto 3rem 4rem"
                   backgroundColor="#FBBC04"
                   borderRadius="15px"
                   width="11px"
                   height="11px"
                 ></Box>
+                </motion.div>
+
+                <motion.div
+                initial={{ x: -10 }}
+                animate={{ x: 10 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  repeatType: "reverse",
+                }}
+              >
                 <Box
                   position="absolute"
-                  inset="auto auto 6rem 20rem"
+                  inset="auto auto 9rem 15rem"
                   backgroundColor="#4285F4"
                   borderRadius="15px"
                   width="11px"
                   height="11px"
                 ></Box>
+                </motion.div>
+
+                <motion.div
+                initial={{ y: 100 }}
+                animate={{ x: -100 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  repeatType: "reverse",
+                }}
+              >
                 <Box
                   position="absolute"
                   inset="auto auto 17rem 18rem"
@@ -199,22 +267,44 @@ const Footer = () => {
                   width="9px"
                   height="9px"
                 ></Box>
+                </motion.div>
+
+                <motion.div
+                initial={{ y: 100 }}
+                animate={{ x: -100 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  repeatType: "reverse",
+                }}
+              >
                 <Box
                   position="absolute"
-                  inset="auto auto 13.5em 10rem"
+                  inset="auto auto 19em 14rem"
                   backgroundColor="#4285F4"
                   borderRadius="15px"
                   width="11px"
                   height="11px"
                 ></Box>
+                </motion.div>
+                <motion.div
+                initial={{ y: -100 }}
+                animate={{ y: 100 }}
+                transition={{
+                  repeat: Infinity,
+                  duration: 2,
+                  repeatType: "reverse",
+                }}
+              >
                 <Box
                   position="absolute"
-                  inset="auto auto 9rem 2rem"
+                  inset="auto auto 15rem 14rem"
                   backgroundColor="#34A853"
                   borderRadius="15px"
                   width="11px"
                   height="11px"
                 ></Box>
+                </motion.div>
               </Box>
             </Box>
             <Box
@@ -236,7 +326,7 @@ const Footer = () => {
                   w={{ base: "252px", lg: "335px" }}
                 >
                   We strive to create a space that fosters collaboration and
-                  learning among tech enthusiasts of all levels. Whether you're a
+                  learning among tech enthusiasts of all levels. Whether you&apos;re a
                   beginner or an expert, our community welcomes you.
                 </Text>
                 <Flex
@@ -244,18 +334,18 @@ const Footer = () => {
                   columnGap="25px"
                   cursor="pointer"
                 >
-                  <a href="https://gdgibadan.slack.com/?redir=%2Farchives%2FD0465RU7TL1%2Fp1672870979253869" target='_blank'>
+                  {/* <a href="https://gdgibadan.slack.com/?redir=%2Farchives%2FD0465RU7TL1%2Fp1672870979253869" target='_blank'> */}
                     <Image src={Slack} />
-                  </a>
-                  <a href="https://twitter.com/gdgibadan?s=11&t=q2B3F1i2ySbJLEmnk5TtKQ" target="_blank">
+                  {/* </a> */}
+                  {/* <a href="https://twitter.com/gdgibadan?s=11&t=q2B3F1i2ySbJLEmnk5TtKQ" target="_blank"> */}
                     <Image src={twitter} />
-                  </a>
-                  <a href="https://www.linkedin.com/company/gdg-ibadan/" target="_blank">
+                  {/* </a> */}
+                  {/* <a href="https://www.linkedin.com/company/gdg-ibadan/" target="_blank"> */}
                     <Image src={linkedin} />
-                  </a>
-                  <a href="https://instagram.com/gdgibadan" target="_blank">
+                  {/* </a> */}
+                  {/* <a href="https://instagram.com/gdgibadan" target="_blank"> */}
                     <Image src={instagram} />
-                  </a>                  
+                  {/* </a>                   */}
                 </Flex>
               </Box>
 

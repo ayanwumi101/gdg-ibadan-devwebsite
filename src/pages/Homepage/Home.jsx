@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+// import React from "react";
 import {
   Box,
   Flex,
@@ -76,9 +76,9 @@ const Home = () => {
             </Text>
 
             <Button bg='#E05D2F' w='210px' h={{ base: '50px', lg: '55px' }} color='white' boxShadow='md'>
-              <a href='https://gdg.community.dev/gdg-ibadan/' target='_blank'>
+              {/* <a href='https://gdg.community.dev/gdg-ibadan/' target='_blank'> */}
                 Join Our Community
-              </a>
+              {/* </a> */}
             </Button>
           </Box>
         </Box>
@@ -130,7 +130,7 @@ const Home = () => {
           // fontFamily="Google Sans Display, sans-serif"
           >
             We strive to create a space that fosters collaboration and learning
-            among tech enthusiasts of all levels. Whether you're a beginner or
+            among tech enthusiasts of all levels. Whether you&apos;re a beginner or
             an expert, our community welcomes you.
           </Text>
           <Link to='/about'><Button bg='#E05D2F' w='150px' h={{ base: '43px', lg: '45px' }} color='white' boxShadow='md'>Know More</Button></Link>
