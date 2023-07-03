@@ -9,7 +9,7 @@ import {
   // UnorderedList,
    Button, Image
 } from "@chakra-ui/react";
-// import React from "react";
+import React from "react";
 // import Buttons from "../buttons";
 import Logo from "../logo";
 // import { LinkedinIcon, SlackIcon, TwitterIcon } from "../icons";
@@ -32,8 +32,6 @@ const Footer = () => {
             as="footer"
             bgColor="#172B37"
             position="relative"
-            // ml={{ base: "19px", lg: "50px" }}
-            // mr={{ base: "18px", lg: "50px" }}
             borderRadius="24px"
             pb={{ base: "20px", lg: "119px" }}
             w='100%'
@@ -45,7 +43,6 @@ const Footer = () => {
               w='90%'
               position="absolute"
               mx='auto'
-              // inset='0'
               borderRadius="24px"
               bottom={{ base: "42.5rem", lg: "27rem" }}
               left="0"
@@ -55,12 +52,10 @@ const Footer = () => {
                 margin='auto'
                 justifyContent={{base:'center', lg: 'space-between'}}
                   width="100%"
-                //   mx="auto"
                 alignItems={{base: 'center', lg: 'flex-start'}}
                 display={{ base: "block", lg: "flex" }}
               >
                 <Box
-                  // as="h4"
                   color="#1E3747"
                   pt={{ base: "148px", lg: "93px" }}
                   pl={{ base: "16px", lg: "90px" }}
@@ -83,9 +78,9 @@ const Footer = () => {
                   mr={{ base: "70px", lg: "90px" }}
                   ml={{ base: "17px", lg: "0px" }}
                 >
-                  {/* <a href="https://gdg.community.dev/gdg-ibadan/" target='_blank'> */}
+                  <a href="https://gdg.community.dev/gdg-ibadan/" target='_blank'>
                     <Button bg='#E05D2F' w='210px' color='white' fontSize={15} h='55px'>Join our community</Button>
-                    {/* </a> */}
+                    </a>
                 </Box>
               </Flex>
               <Box display={{ base: "none" }}>
@@ -334,18 +329,18 @@ const Footer = () => {
                   columnGap="25px"
                   cursor="pointer"
                 >
-                  {/* <a href="https://gdgibadan.slack.com/?redir=%2Farchives%2FD0465RU7TL1%2Fp1672870979253869" target='_blank'> */}
+                  <a href="https://gdgibadan.slack.com/?redir=%2Farchives%2FD0465RU7TL1%2Fp1672870979253869" target='_blank'>
                     <Image src={Slack} />
-                  {/* </a> */}
-                  {/* <a href="https://twitter.com/gdgibadan?s=11&t=q2B3F1i2ySbJLEmnk5TtKQ" target="_blank"> */}
+                  </a>
+                  <a href="https://twitter.com/gdgibadan?s=11&t=q2B3F1i2ySbJLEmnk5TtKQ" target="_blank">
                     <Image src={twitter} />
-                  {/* </a> */}
-                  {/* <a href="https://www.linkedin.com/company/gdg-ibadan/" target="_blank"> */}
+                  </a>
+                  <a href="https://www.linkedin.com/company/gdg-ibadan/" target="_blank">
                     <Image src={linkedin} />
-                  {/* </a> */}
-                  {/* <a href="https://instagram.com/gdgibadan" target="_blank"> */}
+                  </a>
+                  <a href="https://instagram.com/gdgibadan" target="_blank">
                     <Image src={instagram} />
-                  {/* </a>                   */}
+                  </a>                  
                 </Flex>
               </Box>
 
