@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import { RequestHandler, Request, Response, NextFunction } from "express";
 import qr from 'qrcode';
 import passport from "passport";
@@ -7,11 +8,10 @@ import factory from '../config/factory';
 
 
 import User from '../models/user';
-import { userType } from "../models/user";
-import { accountStatus } from "../models/user";
+// import { userType } from "../models/user";
 
 
-const createToken = (userData: any): string => {     ///   no need for this again, using passportJWT already
+const createToken = (userData: any): string => {
     let key = 'process.env.JWT_SECRET';
     let userObj = {
         // firstName: userData.firstName,
@@ -19,6 +19,7 @@ const createToken = (userData: any): string => {     ///   no need for this agai
         // email: userData.email,
         id: userData._id,
         role: userData.userType,
+        verified: userData.verified
     }
 
     const token = jwt.sign(userObj, key, { expiresIn: '1d'});
@@ -29,15 +30,32 @@ const otpMap = new Map();
 
 export const signup: RequestHandler = async (req ,res) => {
     try {
-        const {email, password} = req.body;
+        const {_id, firstName, lastName, email, phoneNumber, password, userType} = req.body;
 
         const exists = await User.findOne({email});
         if(!exists) {
             let userObj;
+            const dataOBJ = {
+                userID: _id,
+                firstName,
+                lastName,
+                email,
+                phoneNumber,
+                role: userType
+            }
             // const qrData = createToken(req.body);
-            const qrData = JSON.stringify(req.body);
+            const qrData = JSON.stringify(dataOBJ);
             const code = await qr.toDataURL(qrData);
-            userObj = {...req.body, password: factory.generateHashPassword(password), code}
+            userObj = {...req.body, password: factory.generateHashPassword(password), code};
+
+            const resetLink = `http://localhost:3000/api/verify-email?email=${email}`;   
+            const msg = {
+                to: email,
+                from: process.env.SENDER!,
+                subject: 'Verify Email',
+                text: `Hello ${firstName},\n\nYou have requested a password reset for your account. To reset your password, please click the following link:\n\n${resetLink}\n\nThis link will expire in 1 hour.\n\nIf you did not request this password reset, please ignore this email.\n\nThanks,\nThe Example Team`,
+            };
+            await sgMail.send(msg);
             // (await User.create(req.body)).save()
             new User(userObj).save()
             .then(user => (res.status(201).json({ data: { msg: 'Signup successfully!', user } })))
@@ -46,19 +64,18 @@ export const signup: RequestHandler = async (req ,res) => {
         }
         return res.status(400).json({ data: { msg: 'Account already exists'} })
     } catch (err: any) {
-        res.status(500).json({ data: { msg: 'Server error', error: err.message } });
+        return res.status(500).json({ data: { msg: 'Server error', error: err.message } });
     }
 };
 
 export const verifyMail: RequestHandler = async (req, res) => {
     try {
-        // const msg = {
-        //     to: user.email,
-        //     from: 'hoismail2017@gmail.com',
-        //     subject: 'Your OTP for login',
-        //     text: `Your OTP is: ${OTP}`,
-        // };
-        // sgMail.send(msg)
+        const {email} = req.query;
+
+        const update = await User.findOneAndUpdate({email}, {verified: true})
+        if(update) return res.status(200).json({ data: { msg: 'Verified' } });
+        return res.status(400).json({ data: { msg: 'Error verifying' } });
+        
     } catch (err: any) {
         res.status(500).json({ data: { msg: 'Server error', error: err.message } });
     }
@@ -78,12 +95,12 @@ export const signin = (req: Request, res: Response, next: NextFunction) => {
                 return res.status(400).json({ msg: info.msg });
             }
             const OTP = Math.floor(100000 + Math.random() * 900000);
-            otpMap.set(user.votersID, OTP);
+            otpMap.set(user.email, OTP);
             console.log(OTP);
             console.log(otpMap)
             const msg = {
                 to: user.email,
-                from: 'hoismail2017@gmail.com',
+                from: process.env.SENDER!,
                 subject: 'Your OTP for login',
                 text: `Your OTP is: ${OTP}`,
             };
@@ -98,10 +115,10 @@ export const signin = (req: Request, res: Response, next: NextFunction) => {
             });
 
             let token = createToken(user);
-            res.status(200).json({ msg: 'check your mail or phone for an OTP sent', token })
+            return res.status(200).json({ msg: 'check your mail or phone for an OTP sent', token })
         })(req,res,next)
     } catch (err: any) {
-        res.status(500).json({ data: { msg: 'Server error', error: err.message } });
+        return res.status(500).json({ data: { msg: 'Server error', error: err.message } });
     }
 };
 
@@ -130,21 +147,8 @@ export const verify = (req: Request, res: Response, next: NextFunction) => {
                 });
                 return;
             }
-
             otpMap.delete(email);
 
-            // interface UserModel extends Document {
-            //     firstName: string,
-            //     lastName: string,
-            //     email: string,
-            //     password: string,
-            //     phoneNumber: string,
-            //     userType: userType,
-            //     status: accountStatus,
-            //     code: string,
-            //     createdDate: Date,
-            //     lastLogin: Date,
-            // }
             User.findOne({ email })
             .then((user: Express.User | null) => {
                 if (!user) {
@@ -160,6 +164,6 @@ export const verify = (req: Request, res: Response, next: NextFunction) => {
             })
             .catch(e => res.status(400).json({ message: e }))
     } catch (err: any) {
-        res.status(500).json({ data: { msg: 'Server error', error: err.message } });
+        return res.status(500).json({ data: { msg: 'Server error', error: err.message } });
     }
 }

@@ -1,35 +1,33 @@
-import mongoose, { Schema } from 'mongoose';
+import mongoose, { Date, Schema } from 'mongoose';
 
 export interface EvenT {
     creatorID?: string;
 	title: string;
 	description: string;
 	location: string;
+	startDate: Date;
+	endDate: Date;
 	passcode: string;
-    // registrationData: Map<string, any>;
     registrationData: string[];
 	tags: string[];
 	eventType: string;
 	ticketType: object;
     registered: object[];
-	attendees: Array<object>;
-	attendees2: Array<any>;
 	maxAttendees: number;
-	list: Map<string, any>
+	list: object;
+	test: Map<string, any>
 }
 
 const eventTypeEnum = [ 'free', 'paid' ];
 
 const eventSchema: Schema<EvenT> = new Schema({
 	creatorID: { type: Schema.Types.ObjectId, ref: 'User'},
-    title: { type: String, required: true, lowercase: true, index: true },
+    title: { type: String, required: true, index: true },
 	description: { type: String, required: true },
-	// location: { type: String, required: true, lowercase: true, index: true },
-	// startDateTime: { type: Date, required: true },
-	// endDateTime: { type: Date, required: true },
-	// date: { type: Date, required: false },
-	// time: String,
-	// passcode: { type: String, required: true, default: null },
+	location: { type: String, required: true, index: true },
+	startDate: { type: Date, required: true },
+	endDate: { type: Date, required: true },
+	passcode: { type: String, default: null },
     registrationData: [],
 	tags: [ { type: String, default: ['speaker', 'guest', 'organizer']} ],
 	registered: [{
@@ -38,25 +36,41 @@ const eventSchema: Schema<EvenT> = new Schema({
         lastName: String,
         email: String,
         phoneNumber: Number, 
+        dynamicData: { type: Map, of: Schema.Types.Mixed },
+		code: { type: String, required: true },
+		ticket: String,
         paid: { type: Boolean, required: true, default: false},
-        dynamicField: { type: Map, of: Schema.Types.Mixed },
-		tag: String
     }],
-	// attendees: [{
-	// 	userID: {type: Schema.Types.ObjectId, ref: 'User'},
-	// 	email: String
-	// }],
-	// attendees2: [ {type: Schema.Types.Mixed} ],
-	// maxAttendees: { type: Number, required: true },
-	list: { type: Map, of: Schema.Types.Mixed },
-	
+	maxAttendees: { type: Number, required: false },
+	test: { type: Map, of: Schema.Types.Mixed },
+	list: {
+		attendance: [{
+			firstName: String,
+			lastName: String,
+			email: String,
+			phoneNumber: Number,
+		}],
+		lunch: [{
+			firstName: String,
+			lastName: String,
+			email: String,
+			phoneNumber: Number,
+		}],
+		swags: [{
+			firstName: String,
+			lastName: String,
+			email: String,
+			phoneNumber: Number,
+		}]
+	},
 	eventType: { type: String, required: true, enum: eventTypeEnum, default: 'free' },
 	ticketType: { 
-		Gold: {type: Number, default: 0},
-		Silver: {type: Number, default: 0},
-		Bronze: {type: Number, default: 0}
+		speaker: {type: Number, default: 0},
+		guest: {type: Number, default: 0},
+		organizer: {type: Number, default: 0},
+		dynamicTicket: { type: Map, of: Schema.Types.Mixed }
 	},
     
-});
+}, {timestamps: true, strictPopulate: false });
 
 export default mongoose.model<EvenT>('Event', eventSchema);

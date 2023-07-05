@@ -12,8 +12,8 @@ import { userRoutes } from './routes/user';
 import './db/connection'
 
 import './auth/passport';
-// const passportLocalStrategy = require('./auth/passport');
-// passportLocalStrategy(passport);
+import sgMail from '@sendgrid/mail';
+sgMail.setApiKey(process.env.SG_API_KEY!)
 
 const app: Express = express();
 
@@ -37,7 +37,8 @@ app.use(( err: unknown, req: Request, res: Response, next: NextFunction ) => {
     console.log(err);
     let errMsg = 'An unknown error occured';
     if (err instanceof Error) errMsg = err.message;
-    res.status(500).json({err: errMsg})
+    console.log({rr: errMsg})
+    // res.status(500).json({err: errMsg})
 
 })
 

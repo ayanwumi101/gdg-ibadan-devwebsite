@@ -1,15 +1,13 @@
 import { Schema, InferSchemaType, model } from "mongoose";
 
 
-const scannerSchema = new Schema({
-	// _id: { type: mongoose.Types.ObjectId },
+const checkInSchema = new Schema({
     name: { type: String, required: true, index: true },
 	eventID: { type: Schema.Types.ObjectId, ref: 'Event' },
-	qualifiedTags: [ {type: String} ],
+	qualifiedTickets: [],
     
-	createdDate: { type: Date, default: Date.now },
 }, {timestamps: true });
 
-type Scanner = InferSchemaType<typeof scannerSchema>
+type checkIn = InferSchemaType<typeof checkInSchema>
 
-export default model<Scanner>('Scanner', scannerSchema);
+export default model<checkIn>('CheckIn', checkInSchema);

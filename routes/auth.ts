@@ -7,6 +7,9 @@ export const authRoutes = express.Router();
 authRoutes.route('/signup')
 .post(authController.signup)
 
+authRoutes.route('/verify-email')
+.get(authController.verifyMail)
+
 authRoutes.route('/signin')
 .post(authController.signin)
 
