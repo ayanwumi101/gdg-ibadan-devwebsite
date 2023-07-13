@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {Box, Flex, Heading, Stack, Image} from '@chakra-ui/react'
 import ellipse from '../../../assets/ellipse.svg'
 import pattern from '../../../assets/patterns.svg'
@@ -9,11 +9,12 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import {motion} from 'framer-motion'
 
 const Hero = () => {
   return (
     <Box w='100%' position='relative'>
-        <Stack justifyContent='space-between' direction={{base: 'column', lg: 'row'}}>
+        <Stack justifyContent='space-between' direction={{base: 'column', lg: 'row'}} >
             <Pattern />
             <HeroImage />
         </Stack>
@@ -24,6 +25,17 @@ const Hero = () => {
 export default Hero
 
 export const Pattern = () => {
+
+    const [isAnimated, setIsAnimated] = useState(false);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => {
+            setIsAnimated(true);
+        }, 2500);
+
+        return () => clearTimeout(timeout);
+    }, []);
+
     return (
         <Box w={{ base: '100%', lg: '50%' }} position='relative' mb={{base: '250px'}}>
             <Box>
@@ -32,9 +44,19 @@ export const Pattern = () => {
             <Box position='absolute' top='0'>
                 <Image src={ellipse} style={{ objectFit: 'cover', width: '100%', height: '500px', borderRadius: 24 }} />
             </Box>
+            <motion.div
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{
+                    type: 'spring',
+                    damping: 10,
+                    stiffness: 100,
+                }}
+            >
             <Box color='white' position='absolute' zIndex='1' top="50%" left={{base: '4%', lg: '10%'}}>
                 <Heading fontSize={{base: 42, lg: 45}} lineHeight={{base: '70px', lg: '80px'}}>We strive to create a space that fosters collaboration</Heading>
             </Box>
+            </motion.div>
         </Box>
     )
 }
