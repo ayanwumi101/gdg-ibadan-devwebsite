@@ -4,7 +4,7 @@ import React from 'react'
 
 const Filters = () => {
   return (
-    <Box w='20%'>
+    <Box w='20%' display={['none', 'none', 'block']}>
         <FilterTemplate />
         <FilterTemplate />
     </Box>

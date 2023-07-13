@@ -111,7 +111,7 @@ const Footer = () => {
                 >
                   <motion.h1
                     initial={{ opacity: 0, y: -20 }}
-                    transition={{ duration: 0.7, delay: 0.5 }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
                     ref={headingRef}
                     animate={headingControls}
                   >

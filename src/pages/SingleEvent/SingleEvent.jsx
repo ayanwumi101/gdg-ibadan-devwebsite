@@ -166,133 +166,10 @@ export const EventSchedule = () => {
           <Text fontSize={14}>Thur , 12 July 2023</Text>
         </Box>
         <Box>
-          <Box p='4' bg='#E3F2FD' h={['auto', '290px', '290px']} display='flex' alignItems='center' justifyContent='center' w='100%'>
-            <Box w='100%'>
-              <Stack direction={['column', 'row', 'row']} justifyContent='space-between' alignItems={['flex-start', 'center']} w='100%'>
-                <Box mb='5' w={['100%', '68%', '68%']}>
-                  <Flex gap='40px' alignItems='center' flexWrap='wrap'>
-                    <Text>8:00AM - 9:00AM</Text>
-                    <Text>Hall 1</Text>
-                    <Text>Opening event</Text>
-                    <Text w='320px' fontSize={15}>
-                      Adeyinka Adeyemi Managing Director/CEO, Intermarc Consulting, Nigeria
-                    </Text>
-                  </Flex>
-
-                </Box>
-
-                <Box maxW='30%' h='265px'>
-                  <Image src={Presenter} w='100%' objectFit='cover' borderRadius='24px' />
-                </Box>
-              </Stack>
-            </Box>
-          </Box>
-
-          <Box p='4' bg='#FFEBEE' h={['auto', '310px', '310px']} display='flex' alignItems='center' justifyContent='center' w='100%'>
-            <Box w='100%'>
-              <Stack direction={['column', 'row', 'row']} justifyContent='space-between' alignItems={['flex-start', 'center']}>
-                <Stack direction={['column', 'row']} justifyContent='space-between' w='800px' mb='7'>
-
-                  <Box>
-                    <Stack spacing={10}>
-                      <Box>
-                        <Text>8:00AM - 9:00AM</Text>
-                      </Box>
-
-                      <Box>
-                        <Text>8:00AM - 9:00AM</Text>
-                      </Box>
-
-                      <Box>
-                        <Text>8:00AM - 9:00AM</Text>
-                      </Box>
-                    </Stack>
-                  </Box>
-
-                  <Box>
-                    <Stack spacing={10}>
-                      <Box>
-                        <Text>Hall A</Text>
-                      </Box>
-
-                      <Box>
-                        <Text>Hall B</Text>
-                      </Box>
-
-                      <Box>
-                        <Text>Hall C</Text>
-                      </Box>
-                    </Stack>
-                  </Box>
-
-
-                  <Box>
-                    <Stack spacing={10}>
-                      <Box>
-                        <Text>Welcome Address</Text>
-                      </Box>
-
-                      <Box>
-                        <Text>Opening Speech</Text>
-                      </Box>
-
-                      <Box>
-                        <Text>Welcome Address</Text>
-                      </Box>
-                    </Stack>
-                  </Box>
-
-
-
-                  <Box>
-                    <Stack spacing={10}>
-                      <Box w='340px'>
-                        <Text>Adeyinka Adeyemi CEO,Intermarc Consulting</Text>
-                      </Box>
-
-                      <Box w='340px'>
-                        <Text>Adeyinka Adeyemi CEO,Intermarc Consulting</Text>
-                      </Box>
-
-                      <Box w='340px'>
-                        <Text>Adeyinka Adeyemi CEO,Intermarc Consulting</Text>
-                      </Box>
-                    </Stack>
-                  </Box>
-
-                </Stack>
-
-                <Box maxW='365px' h='265px'>
-                  <Image src={Presenter} w='100%' objectFit='cover' borderRadius='24px' />
-                </Box>
-              </Stack>
-            </Box>
-          </Box>
-
-          <Box p='4' bg='#FFF8E1' h={['auto', '310px', '310px']} display='flex' alignItems='center' justifyContent='center' w='100%'>
-            <Box w='100%'>
-              <Stack direction={['column', 'row', 'row']} justifyContent='space-between' alignItems={['flex-start', 'center']}>
-                <Box mb='5'>
-                  <Text>8:00AM - 9:00AM</Text>
-                  <Text>8:00AM - 9:00AM</Text>
-                  <Text>8:00AM - 9:00AM</Text>
-                </Box>
-
-                <Box w='275px'>
-                  <Heading fontSize={15} mb='4'>Opening Speech</Heading>
-                  <Text mb='5'>Adeyinka AdeyemiManaging Director/CEO,Intermarc Consulting, Nigeria</Text>
-                  <Text mb='5'>Adeyinka AdeyemiManaging Director/CEO,Intermarc Consulting, Nigeria</Text>
-                </Box>
-
-                <Box maxW='385px' h='265px'>
-                  <Image src={Presenter} w='100%' objectFit='cover' borderRadius='24px' />
-                </Box>
-              </Stack>
-            </Box>
-          </Box>
+          <EventScheduleCard bg='#E3F2FD' />
+          <EventScheduleCard bg='#FCEFEA' />
+          <EventScheduleCard bg='#FFF8E1' />
         </Box>
-
-
       </Box>
     </>
   )
@@ -332,5 +209,85 @@ export const PhotoCollage = () => {
           </Box>
         </Stack>
       </Box>
+  )
+}
+
+
+export const EventScheduleCard = ({bg}) => {
+  return (
+    <Box p='4' bg={bg} h={['auto', '310px', '310px']} display='flex' alignItems='center' justifyContent='center' w='100%'>
+      <Box w='100%'>
+        <Stack direction={['column', 'row', 'row']} justifyContent='space-between' alignItems={['flex-start', 'center']}>
+          <Stack direction='column' spacing={10} justifyContent='space-between' w='800px' mb='7'>
+
+            <Box w='100%'>
+              <Stack justifyContent='space-between' direction={['column', 'row']}>
+                <Box>
+                  <Text>8:00AM - 9:00AM</Text>
+                </Box>
+
+                <Box>
+                  <Text>Hall A</Text>
+                </Box>
+
+                <Box fontWeight='medium'>
+                  <Text>Welcome Address</Text>
+                </Box>
+
+                <Box w='340px'>
+                  <Text>Adeyinka Adeyemi CEO,Intermarc Consulting</Text>
+                </Box>
+              </Stack>
+            </Box>
+
+
+            <Box w='100%'>
+              <Stack justifyContent='space-between' direction={['column', 'row']}>
+                <Box>
+                  <Text>8:00AM - 9:00AM</Text>
+                </Box>
+
+                <Box>
+                  <Text>Hall A</Text>
+                </Box>
+
+                <Box fontWeight='medium'>
+                  <Text>Welcome Address</Text>
+                </Box>
+
+                <Box w='340px'>
+                  <Text>Adeyinka Adeyemi CEO,Intermarc Consulting</Text>
+                </Box>
+              </Stack>
+            </Box>
+
+            <Box w='100%'>
+              <Stack justifyContent='space-between' direction={['column', 'row']}>
+                <Box>
+                  <Text>8:00AM - 9:00AM</Text>
+                </Box>
+
+                <Box>
+                  <Text>Hall A</Text>
+                </Box>
+
+                <Box fontWeight='medium'>
+                  <Text>Welcome Address</Text>
+                </Box>
+
+                <Box w='340px'>
+                  <Text>Adeyinka Adeyemi CEO,Intermarc Consulting</Text>
+                </Box>
+              </Stack>
+            </Box>
+
+          </Stack>
+
+          <Box maxW='365px' h='265px'>
+            <Image src={Presenter} w='100%' objectFit='cover' borderRadius='24px' />
+          </Box>
+        </Stack>
+      </Box>
+    </Box>
   )
 }

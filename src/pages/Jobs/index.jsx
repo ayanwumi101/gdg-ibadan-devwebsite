@@ -8,7 +8,7 @@ const index = () => {
   return (
     <Box>
       <Hero />
-      <Stack w='80%' mx='auto' direction='row' justifyContent='space-between'>
+      <Stack w={['90%', '80%']} mx='auto' direction='row' justifyContent='space-between'>
         <Filters />
         <JobCard />
       </Stack>
